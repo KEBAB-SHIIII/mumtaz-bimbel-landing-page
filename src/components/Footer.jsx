@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const OFFICIAL_WA_NUMBER = '6281234567890';
-export const OFFICIAL_WA_DISPLAY = '+62 812-3456-7890';
+export const OFFICIAL_WA_NUMBER = '6287742486612';
+export const OFFICIAL_WA_DISPLAY = '+62 877-4248-6612';
 
 export default function Footer() {
   return (
@@ -27,12 +27,12 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white mb-3">Hubungi Kami</h4>
             <p className="text-white/85 leading-relaxed mb-2 max-w-xs">
-              Jl. Ahmad Yani, Mentawa Baru Ketapang, Sampit, Kotawaringin Timur, Kalimantan Tengah
+              Jl. H. Ikap No.1, Mentawa Baru Hilir, Kec. Mentawa Baru Ketapang, Kabupaten Kotawaringin Timur, Kalimantan Tengah 74321, Indonesia
             </p>
             <p className="text-white/90">
               WhatsApp: <span>{OFFICIAL_WA_DISPLAY}</span>
             </p>
-            <p className="text-white/90">Surel: salam@mumtazsampit.sch.id</p>
+            <p className="text-white/90">Surel: bimbelmumtaz01@gmail.com</p>
           </div>
         </div>
       </div>

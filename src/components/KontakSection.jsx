@@ -170,7 +170,7 @@ export default function KontakSection() {
                   <div>
                     <strong className="block font-bold text-white">Alamat</strong>
                     <span className="text-white/85 leading-snug block mt-0.5">
-                      Jl. Ahmad Yani, Mentawa Baru Ketapang, Sampit, Kotawaringin Timur
+                      Jl. H. Ikap No.1, Mentawa Baru Hilir, Kec. Mentawa Baru Ketapang, Kabupaten Kotawaringin Timur, Kalimantan Tengah 74321, Indonesia
                     </span>
                   </div>
                 </li>
@@ -181,7 +181,7 @@ export default function KontakSection() {
                   <div>
                     <strong className="block font-bold text-white">Jam belajar</strong>
                     <span className="text-white/85 leading-snug block mt-0.5">
-                      Senin sampai Sabtu, pagi sampai malam
+                      Setiap Hari (Senin–Minggu), 08.00 – 21.00 WIB (Jam Sesi Fleksibel)
                     </span>
                   </div>
                 </li>
