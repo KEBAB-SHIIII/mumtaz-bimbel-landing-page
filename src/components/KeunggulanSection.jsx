@@ -19,44 +19,50 @@ export default function KeunggulanSection() {
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15]">
               Kenapa memilih Bimbel Mumtaz
             </h2>
-            <p className="text-[#475569] mt-4 max-w-lg leading-relaxed">
-              Di kelas yang penuh, guru sulit mendampingi satu per satu. Di rumah, anak bebas bertanya tanpa rasa malu.
-            </p>
 
-            <div className="mt-9 space-y-5">
+            <div className="mt-7 space-y-4">
               <div className="benefit-row reveal-element delay-75 flex gap-4">
                 <span className="benefit-icon">1</span>
                 <div>
-                  <h3 className="font-bold">Pembelajaran privat</h3>
+                  <h3 className="font-bold">Guru Datang ke Rumah</h3>
                   <p className="text-sm text-[#475569] mt-1 leading-relaxed">
-                    Satu tutor untuk satu anak, tanpa gangguan teman sekelas.
+                    Menjadi solusi praktis bagi orang tua yang sibuk dan tidak sempat mengantar anak les.
                   </p>
                 </div>
               </div>
               <div className="benefit-row reveal-element delay-150 flex gap-4">
                 <span className="benefit-icon">2</span>
                 <div>
-                  <h3 className="font-bold">Pendampingan personal</h3>
+                  <h3 className="font-bold">Pendampingan Personal (1-on-1)</h3>
                   <p className="text-sm text-[#475569] mt-1 leading-relaxed">
-                    Tutor sabar dan ramah sehingga anak berani bertanya.
+                    Sesi privat eksklusif satu guru satu murid membuat proses belajar lebih fokus, interaktif, dan mudah dipahami.
                   </p>
                 </div>
               </div>
               <div className="benefit-row reveal-element delay-200 flex gap-4">
                 <span className="benefit-icon">3</span>
                 <div>
-                  <h3 className="font-bold">Jadwal fleksibel</h3>
+                  <h3 className="font-bold">Pengajar Berpengalaman dan Sabar</h3>
                   <p className="text-sm text-[#475569] mt-1 leading-relaxed">
-                    Pagi sampai malam, Senin sampai Sabtu, sesuai rutinitas keluarga.
+                    Didukung oleh tenaga pendidik yang profesional, ramah, dan telaten menghadapi berbagai karakter anak.
+                  </p>
+                </div>
+              </div>
+              <div className="benefit-row reveal-element delay-250 flex gap-4">
+                <span className="benefit-icon">4</span>
+                <div>
+                  <h3 className="font-bold">Cakupan Luas dan Lengkap</h3>
+                  <p className="text-sm text-[#475569] mt-1 leading-relaxed">
+                    Melayani jenjang pendidikan dari TK sampai SMA, mencakup pelajaran sekolah umum hingga bimbingan mengaji.
                   </p>
                 </div>
               </div>
               <div className="benefit-row reveal-element delay-300 flex gap-4">
-                <span className="benefit-icon">4</span>
+                <span className="benefit-icon">5</span>
                 <div>
-                  <h3 className="font-bold">Metode sesuai kebutuhan</h3>
+                  <h3 className="font-bold">Jadwal Fleksibel</h3>
                   <p className="text-sm text-[#475569] mt-1 leading-relaxed">
-                    Cara mengajar disesuaikan dengan gaya belajar tiap siswa.
+                    Waktu belajar dapat disesuaikan dengan kenyamanan dan kesibukan siswa.
                   </p>
                 </div>
               </div>

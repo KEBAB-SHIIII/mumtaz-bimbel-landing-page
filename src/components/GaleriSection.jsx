@@ -8,7 +8,7 @@ export default function GaleriSection() {
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15]">
             Galeri kegiatan belajar
           </h2>
-          <p className="text-[#475569] mt-4">Suasana bimbingan belajar di rumah siswa di Sampit.</p>
+          <p className="text-[#475569] mt-4">Suasana bimbingan belajar Mumtaz.</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] sm:auto-rows-[190px] gap-3 sm:gap-4">

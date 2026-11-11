@@ -1,9 +1,3 @@
-/* ==========================================================================
-   STYLE.CSS - Clean, Minimalist & Modern Styling for Bimbel Mumtaz Sampit
-   Acuan Desain: Natural, Professional Educational Business Website
-   Primary: #0B1F3B | Accent: #2563EB | Secondary: #60A5FA | Surface: #DBEAFE | BG: #F0F7FF | White: #FFFFFF
-   ========================================================================== */
-
 :root {
   --primary: #0B1F3B;
   --accent: #2563EB;
@@ -22,7 +16,6 @@ html {
   scroll-padding-top: 5rem;
 }
 
-/* Proportional 90% Scale for Arbitrary Pixel Utilities */
 .max-w-\[1100px\] {
   max-width: 990px !important;
 }
@@ -51,9 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Pro Font Pairing:
-   - Headings & Card Titles (h1, h2, h3, .program-title): Manrope (Executive Pro Sans)
-   - Body, Badges & UI: Inter (Industry-standard Pro UI Sans) */
+/* Typography */
 h1,
 h2 {
   font-family: 'Manrope', 'Inter', sans-serif;
@@ -66,7 +57,6 @@ h3,
   letter-spacing: -0.02em;
 }
 
-/* Custom Minimal Scrollbar */
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -84,13 +74,11 @@ h3,
   background: #2563EB;
 }
 
-/* Hero Backdrop Geometric Shape */
 .hero-backdrop-shape {
   background: linear-gradient(145deg, #DBEAFE 0%, #F0F7FF 60%, #DBEAFE 100%);
   border-radius: 36px 140px 36px 80px;
 }
 
-/* Collage Image Wrappers in About Section */
 .collage-img-1,
 .collage-img-2,
 .collage-img-3,

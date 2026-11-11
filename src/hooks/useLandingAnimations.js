@@ -40,7 +40,7 @@ export function useLandingAnimations() {
     }
 
     const revealElements = document.querySelectorAll(
-      '.reveal-element, .reveal-left, .reveal-right, .reveal-scale'
+      '.reveal-element, .reveal-left, .reveal-right, .reveal-scale, .reveal-pop'
     );
 
     if (prefersReducedMotion || !('IntersectionObserver' in window)) {
