@@ -8,28 +8,38 @@ const FAQ_DATA = [
   },
   {
     q: 'Untuk jenjang pendidikan apa saja?',
-    a: 'Kami melayani jenjang Pra-sekolah, PAUD, TK, SD, dan SMP.',
+    a: 'Kami melayani jenjang Pra-sekolah, PAUD, TK, SD, SMP dan SMA.',
     delay: 'delay-100',
   },
   {
-    q: 'Apakah jadwal belajarnya bisa disesuaikan?',
-    a: 'Tentu saja! Jadwal belajar sangat fleksibel dan dapat disesuaikan dengan rutinitas harian keluarga di rumah.',
+    q: 'Bagaimana jadwal belajarnya?',
+    a: 'Jadwal belajar kami sangat fleksibel dan dapat disesuaikan dengan rutinitas harian anak di rumah.',
     delay: 'delay-150',
   },
   {
     q: 'Apa saja materi yang diajarkan?',
-    a: "Kami mengajarkan Pelajaran Umum (SD-SMP), Agama, Bahasa Arab, Bahasa Inggris, Calistung, hingga Mengaji Iqro/Al-Qur'an.",
+    a: "Kami mengajarkan Pelajaran Umum (SD-SMA), Agama, Bahasa Arab, Bahasa Inggris, Calistung, hingga Mengaji Iqro/Al-Qur'an.",
     delay: 'delay-200',
   },
   {
     q: '1 pertemuan durasinya berapa lama?',
-    a: 'Durasi belajarnya maksimal 1 jam.',
+    a: 'Durasi belajarnya 1 pertemuan maksimal 1 jam.',
     delay: 'delay-250',
   },
   {
-    q: 'Bagaimana sistem pembayarannya?',
-    a: 'Pembayaran dilakukan di akhir setelah les sesuai absen, dan per awal bulan.',
+    q: 'Berapa biaya les atau daftar harga (price list) per bulannya?',
+    a: 'Biaya les kami sangat terjangkau dan bervariasi menyesuaikan jenjang pendidikan anak. Untuk detail price list lengkap, silakan hubungi admin kami melalui WhatsApp.',
     delay: 'delay-300',
+  },
+  {
+    q: 'Bagaimana sistem pembayarannya?',
+    a: 'Pembayaran dihitung berdasarkan jumlah kehadiran (absensi) anak dalam satu bulan. Total tagihan tersebut dibayarkan sekaligus satu kali pada setiap awal bulan.',
+    delay: 'delay-350',
+  },
+  {
+    q: 'Bagaimana cara mendaftarnya?',
+    a: 'Silakan mengisi formulir pada bagian Kontak atau menghubungi kami melalui pesan WhatsApp. Tim kami akan dengan senang hati menghubungi Anda kembali untuk mengatur jadwal tutor.',
+    delay: 'delay-400',
   },
 ];
 
