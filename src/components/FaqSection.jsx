@@ -2,28 +2,33 @@ import React, { useState } from 'react';
 
 const FAQ_DATA = [
   {
-    q: 'Apakah tutor datang ke rumah?',
-    a: 'Ya. Semua program berbasis kunjungan ke rumah siswa di wilayah Sampit sesuai jadwal yang disepakati.',
+    q: 'Bagaimana sistem belajar di Bimbel Mumtaz?',
+    a: 'Sistem belajar kami adalah 1 Guru 1 Murid (Privat), di mana guru akan datang langsung ke rumah siswa sehingga anak bisa lebih fokus.',
     delay: 'delay-75',
   },
   {
-    q: 'Jenjang apa saja yang dilayani?',
-    a: "TK, SD, SMP, SMA termasuk persiapan SNBT/UTBK, serta privat mengaji Al-Qur'an.",
+    q: 'Untuk jenjang pendidikan apa saja?',
+    a: 'Kami melayani jenjang Pra-sekolah, PAUD, TK, SD, dan SMP.',
+    delay: 'delay-100',
+  },
+  {
+    q: 'Apakah jadwal belajarnya bisa disesuaikan?',
+    a: 'Tentu saja! Jadwal belajar sangat fleksibel dan dapat disesuaikan dengan rutinitas harian keluarga di rumah.',
     delay: 'delay-150',
   },
   {
-    q: 'Bagaimana jadwal belajarnya?',
-    a: 'Fleksibel. Pilih sesi pagi, siang, sore, atau malam dari Senin sampai Sabtu.',
+    q: 'Apa saja materi yang diajarkan?',
+    a: "Kami mengajarkan Pelajaran Umum (SD-SMP), Agama, Bahasa Arab, Bahasa Inggris, Calistung, hingga Mengaji Iqro/Al-Qur'an.",
     delay: 'delay-200',
   },
   {
-    q: 'Berapa biayanya?',
-    a: 'Biaya mengikuti jenjang dan jumlah pertemuan per bulan. Hubungi admin lewat WhatsApp untuk rincian paket.',
+    q: '1 pertemuan durasinya berapa lama?',
+    a: 'Durasi belajarnya maksimal 1 jam.',
     delay: 'delay-250',
   },
   {
-    q: 'Bagaimana cara mendaftar?',
-    a: 'Isi formulir di bagian Kontak atau kirim pesan WhatsApp. Tim kami akan menghubungi Anda dan mengatur jadwal tutor.',
+    q: 'Bagaimana sistem pembayarannya?',
+    a: 'Pembayaran dilakukan di akhir setelah les sesuai absen, dan per awal bulan.',
     delay: 'delay-300',
   },
 ];

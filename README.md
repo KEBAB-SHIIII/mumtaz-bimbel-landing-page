@@ -2,7 +2,7 @@
 
 Implementasi antarmuka web profil dan pendaftaran les privat guru datang ke rumah untuk Bimbel Mumtaz Sampit menggunakan React 18 dan Vite guna menampilkan program belajar (TK, SD, SMP, SMA, dan Mengaji Al-Qur'an), akordeon FAQ, serta formulir pendaftaran yang terhubung langsung ke WhatsApp Admin.
 
-> **Status:** aplikasi frontend SPA berbasis komponen React dengan struktur standar Vite. Nomor WhatsApp `+62 812-3456-7890`, alamat, dan surel `salam@mumtazsampit.sch.id` merupakan data contoh yang siap disesuaikan dengan kontak resmi UMKM.
+> **Status:** aplikasi frontend SPA berbasis komponen React dengan struktur standar Vite. Menggunakan kontak resmi WhatsApp `+62 877-4248-6612`, alamat `Jl. H. Ikap No.1, Sampit`, surel `bimbelmumtaz01@gmail.com`, dan jam operasional `Senin-Minggu, 08.00 - 21.00`.
 
 ## Alur utama
 
@@ -10,7 +10,7 @@ Implementasi antarmuka web profil dan pendaftaran les privat guru datang ke ruma
 2. Hook [`useLandingAnimations.js`](./src/hooks/useLandingAnimations.js) menginisialisasi `IntersectionObserver` untuk menjalankan animasi kemunculan dua arah (`bidirectional scroll reveal`) serta penghitung angka statistik pada bagian Tentang Kami.
 3. Pengunjung meninjau lima kartu program pada [`ProgramSection.jsx`](./src/components/ProgramSection.jsx), empat poin keunggulan pada [`KeunggulanSection.jsx`](./src/components/KeunggulanSection.jsx), dokumentasi kegiatan pada [`GaleriSection.jsx`](./src/components/GaleriSection.jsx), dan daftar pertanyaan umum pada [`FaqSection.jsx`](./src/components/FaqSection.jsx).
 4. Pada [`KontakSection.jsx`](./src/components/KontakSection.jsx), orang tua memilih program melalui custom dropdown bebas ikon/emotikon (menampilkan nama program di sisi kiri dan pill tag jenjang di sisi kanan) lalu mengisi nama, alamat rumah, dan catatan jadwal.
-5. Saat formulir disubmit, komponen memvalidasi state input, menyusun teks pesan WhatsApp terformat, menampilkan notifikasi sukses beserta tombol cadangan, dan membuka tautan `wa.me/6281234567890` di tab baru.
+5. Saat formulir disubmit, komponen memvalidasi state input, menyusun teks pesan WhatsApp terformat, menampilkan notifikasi sukses beserta tombol cadangan, dan membuka tautan `wa.me/6287742486612` di tab baru.
 
 ## Struktur direktori
 

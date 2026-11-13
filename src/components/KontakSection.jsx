@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { OFFICIAL_WA_NUMBER, OFFICIAL_WA_DISPLAY } from './Footer';
+import {
+  OFFICIAL_WA_NUMBER,
+  OFFICIAL_WA_DISPLAY,
+  OFFICIAL_ADDRESS,
+  OFFICIAL_HOURS,
+} from './Footer';
 
 const PROGRAM_OPTIONS = [
   { value: 'tk', label: 'Privat TK', tag: 'Usia Dini', waLabel: 'Privat TK (Usia Dini)' },
@@ -170,7 +175,7 @@ export default function KontakSection() {
                   <div>
                     <strong className="block font-bold text-white">Alamat</strong>
                     <span className="text-white/85 leading-snug block mt-0.5">
-                      Jl. Ahmad Yani, Mentawa Baru Ketapang, Sampit, Kotawaringin Timur
+                      {OFFICIAL_ADDRESS}
                     </span>
                   </div>
                 </li>
@@ -179,19 +184,10 @@ export default function KontakSection() {
                     <span className="material-symbols-outlined text-[18px]">schedule</span>
                   </span>
                   <div>
-                    <strong className="block font-bold text-white">Jam belajar</strong>
+                    <strong className="block font-bold text-white">Jam operasional</strong>
                     <span className="text-white/85 leading-snug block mt-0.5">
-                      Senin sampai Sabtu, pagi sampai malam
+                      {OFFICIAL_HOURS}
                     </span>
-                  </div>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="contact-icon-badge">
-                    <span className="material-symbols-outlined text-[18px]">call</span>
-                  </span>
-                  <div>
-                    <strong className="block font-bold text-white">WhatsApp admin</strong>
-                    <span className="text-white/85 leading-snug block mt-0.5">{OFFICIAL_WA_DISPLAY}</span>
                   </div>
                 </li>
               </ul>
@@ -248,7 +244,7 @@ export default function KontakSection() {
                   <input
                     className="form-field"
                     id="homeAddress"
-                    placeholder="Contoh: Jl. Ahmad Yani"
+                    placeholder="Contoh: Jl. H. Ikap No.1"
                     required
                     type="text"
                     value={homeAddress}

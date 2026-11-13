@@ -128,7 +128,7 @@ export default function Navbar() {
         >
           <div className="w-9 h-9 rounded-full overflow-hidden border border-[#DBEAFE] shrink-0">
             <img
-              src="assets/images/logo-mumtaz.jpg"
+              src="assets/images/logo-mumtaz.png"
               alt="Logo Bimbel Mumtaz"
               className="w-full h-full object-cover"
               loading="eager"

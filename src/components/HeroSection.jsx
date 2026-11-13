@@ -103,7 +103,7 @@ export default function HeroSection() {
                   <circle cx="220" cy="178" r="108" fill="url(#heroLogoRing)" stroke="#FFFFFF" strokeWidth="4" />
                   <circle cx="220" cy="178" r="101" fill="#FFFFFF" />
                   <image
-                    href="assets/images/logo-mumtaz.jpg"
+                    href="assets/images/logo-mumtaz.png"
                     x="110"
                     y="68"
                     width="220"
