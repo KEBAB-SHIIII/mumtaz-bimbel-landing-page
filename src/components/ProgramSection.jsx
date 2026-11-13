@@ -19,7 +19,7 @@ export default function ProgramSection() {
             <article className="program-card">
               <div className="program-card-body">
                 <span className="program-pill">USIA DINI</span>
-                <h3 className="program-title">Privat TK</h3>
+                <h3 className="program-title">Privat PAUD & TK</h3>
               </div>
               <div className="program-illust" aria-hidden="true">
                 <svg viewBox="0 0 180 150" fill="none" xmlns="http://www.w3.org/2000/svg">
