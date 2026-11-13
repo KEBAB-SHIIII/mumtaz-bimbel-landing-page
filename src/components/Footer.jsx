@@ -28,11 +28,11 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h3 className="font-bold text-base sm:text-[17px] text-white leading-tight">
+                <h3 className="font-bold text-base sm:text-[19px] text-white leading-tight">
                   Bimbel Mumtaz Sampit
                 </h3>
-                <span className="text-[11px] font-semibold tracking-wider uppercase text-[#93C5FD]">
-                  Les Privat ke Rumah
+                <span className="text-[10px] font-semibold tracking-wider uppercase text-[#93C5FD]">
+                  Privat Berkualitas, Dekat & Terpercaya!
                 </span>
               </div>
             </div>
