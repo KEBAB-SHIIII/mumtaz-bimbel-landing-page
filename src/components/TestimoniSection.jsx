@@ -25,7 +25,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: 4,
     name: 'Syifa',
-    level: 'Kelas 5 • SDIT Arafah Sampit',
+    level: 'Kelas 9 • SMPIT Arafah Sampit',
     quote:
       'Nilai ulangan Sejarah Kebudayaan Islam syifa kemaren 100 kak',
   },

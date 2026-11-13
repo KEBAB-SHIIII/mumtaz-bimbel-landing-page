@@ -30,7 +30,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="hero-item delay-150 text-[#475569] text-base sm:text-lg mt-6 max-w-2xl leading-relaxed">
-              Layanan bimbingan belajar privat dan online terpercaya di Sampit. Dengan sistem guru datang langsung ke rumah <span className="whitespace-nowrap">(1-on-1)</span>, kami mendampingi siswa dari TK sampai SMA secara personal, ramah, dan terarah, mencakup peningkatan prestasi akademik hingga mengaji dengan metode yang menyenangkan.
+              Layanan bimbingan belajar privat dan online terpercaya di Sampit. Dengan sistem guru datang langsung ke rumah <span className="whitespace-nowrap">(1-on-1)</span>, kami mendampingi siswa dari Paud sampai SMA secara personal, ramah, dan terarah, mencakup peningkatan prestasi akademik hingga mengaji dengan metode yang menyenangkan.
             </p>
 
             <div className="hero-item delay-250 flex flex-wrap items-center gap-4 mt-9">
