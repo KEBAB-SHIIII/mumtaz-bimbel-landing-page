@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const NAV_ITEMS = [
   { href: '#', label: 'Beranda', id: 'hero' },
   { href: '#tentang-kami', label: 'Tentang Kami', id: 'tentang-kami' },
+  { href: '#testimoni', label: 'Testimoni', id: 'testimoni' },
   { href: '#program', label: 'Program', id: 'program' },
   { href: '#keunggulan', label: 'Keunggulan', id: 'keunggulan' },
   { href: '#galeri', label: 'Galeri', id: 'galeri' },
