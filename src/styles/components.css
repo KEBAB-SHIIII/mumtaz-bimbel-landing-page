@@ -126,6 +126,7 @@
     linear-gradient(180deg, #C7E0FF 0%, #DFEEFF 38%, #F0F7FF 74%, #FFFFFF 100%);
 }
 
+.section-blue-visimisi,
 .section-blue-program,
 .section-blue-galeri,
 .section-blue-kontak {
@@ -542,34 +543,10 @@
   }
 }
 
-/* Visi & Misi */
-.about-unified-card {
-  position: relative;
-  margin-top: 4.5rem;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.about-unified-card:hover {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-@media (min-width: 640px) {
-  .about-unified-card {
-    margin-top: 6rem;
-    padding: 0;
-    border-radius: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .about-unified-card {
-    margin-top: 7rem;
-  }
+/* Visi & Misi Section Penuh Satu Layar */
+.section-blue-visimisi {
+  border-top: 1px solid #E0ECFF;
+  border-bottom: 1px solid #E0ECFF;
 }
 
 .about-visi-card {
@@ -600,6 +577,35 @@
   background: linear-gradient(135deg, #FFFFFF 0%, #F5F9FF 100%);
   transform: translateX(4px);
   box-shadow: 0 8px 24px -6px rgba(37, 99, 235, 0.14);
+}
+
+/* Misi Stagger Group: Sekali scroll langsung memicu animasi berurutan untuk semua item */
+.js-ready .misi-stagger-group .misi-stagger-item {
+  opacity: 0;
+  transform: translate3d(28px, 10px, 0);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.misi-stagger-group.is-revealed .misi-stagger-item:nth-child(1),
+.misi-stagger-group[data-revealed="true"] .misi-stagger-item:nth-child(1) {
+  opacity: 1 !important;
+  transform: none !important;
+  transition-delay: 80ms;
+}
+
+.misi-stagger-group.is-revealed .misi-stagger-item:nth-child(2),
+.misi-stagger-group[data-revealed="true"] .misi-stagger-item:nth-child(2) {
+  opacity: 1 !important;
+  transform: none !important;
+  transition-delay: 220ms;
+}
+
+.misi-stagger-group.is-revealed .misi-stagger-item:nth-child(3),
+.misi-stagger-group[data-revealed="true"] .misi-stagger-item:nth-child(3) {
+  opacity: 1 !important;
+  transform: none !important;
+  transition-delay: 360ms;
 }
 
 /* Galeri */
@@ -1070,3 +1076,269 @@
   background-color: #1D4ED8;
   transform: translateY(-2px);
 }
+
+/* Testimoni Section */
+.section-testimoni {
+  position: relative;
+  background-color: #FFFFFF;
+  padding-top: 5.5rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+  .section-testimoni {
+    padding-top: 6.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-testimoni {
+    padding-top: 7.5rem;
+    padding-bottom: 8.5rem;
+  }
+}
+
+.testi-header-spacing {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .testi-header-spacing {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testi-header-spacing {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Testimoni 3-Card Carousel (Active Bubble & Faded Sides) */
+.testi-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testi-3col-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .testi-3col-grid {
+    grid-template-columns: 1fr 1.35fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.testi-card-active {
+  position: relative;
+  background: linear-gradient(135deg, #F0F7FF 0%, #DFEEFE 45%, #BFDCFE 100%) !important;
+  color: #0B1F3B !important;
+  border-radius: 1.5rem;
+  border: 1.5px solid #93C5FD;
+  padding: 1.75rem 1.75rem;
+  box-shadow: 0 20px 45px -12px rgba(37, 99, 235, 0.22), 0 4px 12px -2px rgba(37, 99, 235, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: all 0.35s ease;
+}
+
+@media (min-width: 640px) {
+  .testi-card-active {
+    padding: 2rem 2.25rem;
+  }
+}
+
+.testi-card-faded {
+  position: relative;
+  background-color: transparent;
+  color: #94A3B8;
+  opacity: 0.42;
+  border-radius: 1.5rem;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.testi-card-faded:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+
+.testi-bubble-tail {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 15px;
+  height: 15px;
+  background-color: #BFDCFE;
+  border-bottom: 1.5px solid #93C5FD;
+  border-right: 1.5px solid #93C5FD;
+}
+
+/* Testimoni Interactivity & Slide Transitions */
+@keyframes testiSlideNext {
+  0% {
+    opacity: 0;
+    transform: translate3d(22px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes testiSlidePrev {
+  0% {
+    opacity: 0;
+    transform: translate3d(-22px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.testi-anim-next {
+  animation: testiSlideNext 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
+}
+
+.testi-anim-prev {
+  animation: testiSlidePrev 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
+}
+
+/* Active card hover elevation */
+.testi-card-active:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 52px -12px rgba(37, 99, 235, 0.28), 0 6px 16px -2px rgba(37, 99, 235, 0.1);
+}
+
+/* Brush stroke draw-in on scroll reveal */
+.testi-brush-path {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+}
+
+.is-revealed .testi-brush-path,
+[data-revealed="true"] .testi-brush-path {
+  stroke-dashoffset: 0;
+}
+
+.testi-nav-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1.5px solid #E2E8F0;
+  background-color: #FFFFFF;
+  color: #0B1F3B;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(11, 31, 59, 0.05);
+}
+
+.testi-nav-arrow:hover {
+  color: #2563EB;
+  border-color: #93C5FD;
+  background-color: #F0F7FF;
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.16);
+}
+
+.testi-nav-arrow:active {
+  transform: scale(0.92);
+}
+
+/* Tombol Panah Melayang di Pinggir Kartu (Floating Side Arrows) */
+.testi-arrow-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 25;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #0B1F3B;
+  border: 1.5px solid #BFDBFE;
+  box-shadow: 0 8px 22px -4px rgba(37, 99, 235, 0.22), 0 2px 6px rgba(11, 31, 59, 0.06);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testi-arrow-left {
+  left: -12px;
+}
+
+.testi-arrow-right {
+  right: -12px;
+}
+
+@media (min-width: 640px) {
+  .testi-arrow-side {
+    width: 44px;
+    height: 44px;
+  }
+
+  .testi-arrow-left {
+    left: -22px;
+  }
+
+  .testi-arrow-right {
+    right: -22px;
+  }
+}
+
+.testi-arrow-side:hover {
+  color: #2563EB;
+  border-color: #60A5FA;
+  background-color: #F0F7FF;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 12px 28px -4px rgba(37, 99, 235, 0.32);
+}
+
+.testi-arrow-side:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.testi-quote-icon {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  display: block;
+  flex-shrink: 0;
+}
+
+.testi-quote-icon-sm {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  display: block;
+  flex-shrink: 0;
+}
+

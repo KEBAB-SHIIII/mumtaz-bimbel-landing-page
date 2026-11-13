@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import TestimoniSection from './components/TestimoniSection';
 import ProgramSection from './components/ProgramSection';
 import KeunggulanSection from './components/KeunggulanSection';
 import GaleriSection from './components/GaleriSection';
@@ -20,6 +21,7 @@ export default function App() {
       <main className="w-full">
         <HeroSection />
         <AboutSection />
+        <TestimoniSection />
         <ProgramSection />
         <KeunggulanSection />
         <GaleriSection />
