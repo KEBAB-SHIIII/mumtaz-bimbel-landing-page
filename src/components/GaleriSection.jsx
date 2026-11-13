@@ -46,7 +46,7 @@ export default function GaleriSection() {
           </figure>
           <figure className="gallery-item reveal-scale delay-200">
             <img
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=500&q=80"
+              src="./assets/images/Belajar_Fokus.jpeg" 
               alt="Latihan soal terarah"
               loading="lazy"
             />
