@@ -14,7 +14,7 @@ export default function GaleriSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] sm:auto-rows-[190px] gap-3 sm:gap-4">
           <figure className="gallery-item reveal-scale col-span-2 row-span-2">
             <img
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80"
+              src="./assets/images/Belajar_Fokus.jpeg"
               alt="Pendampingan belajar anak di rumah"
               loading="lazy"
             />
@@ -22,7 +22,7 @@ export default function GaleriSection() {
           </figure>
           <figure className="gallery-item reveal-scale delay-100">
             <img
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500&q=80"
+              src="./assets/images/belajarfokus.jpg"
               alt="Diskusi soal latihan"
               loading="lazy"
             />
@@ -30,7 +30,7 @@ export default function GaleriSection() {
           </figure>
           <figure className="gallery-item reveal-scale delay-200">
             <img
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80"
+              src="./assets/images/foto_mengaji.jpeg"
               alt="Bimbingan mengaji"
               loading="lazy"
             />
@@ -38,7 +38,7 @@ export default function GaleriSection() {
           </figure>
           <figure className="gallery-item reveal-scale delay-100">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80"
+              src="./assets/images/belajar_fokus.jpg" 
               alt="Belajar fokus bersama tutor"
               loading="lazy"
             />
@@ -46,7 +46,7 @@ export default function GaleriSection() {
           </figure>
           <figure className="gallery-item reveal-scale delay-200">
             <img
-              src="./assets/images/Belajar_Fokus.jpeg" 
+              src="./assets/images/mengerjakansoal.jpeg" 
               alt="Latihan soal terarah"
               loading="lazy"
             />
