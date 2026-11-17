@@ -2,7 +2,7 @@
 
 Implementasi antarmuka web profil dan pendaftaran les privat guru datang ke rumah untuk Bimbel Mumtaz Sampit menggunakan React 18 dan Vite guna menampilkan program belajar (TK, SD, SMP, SMA, dan Mengaji Al-Qur'an), akordeon FAQ, serta formulir pendaftaran yang terhubung langsung ke WhatsApp Admin.
 
-> **Status:** aplikasi frontend SPA berbasis komponen React dengan struktur standar Vite. Menggunakan kontak resmi WhatsApp `+62 877-4248-6612`, alamat `Jl. H. Ikap No.1, Sampit`, surel `bimbelmumtaz01@gmail.com`, dan jam operasional `Senin-Minggu, 08.00 - 21.00`.
+> **Status:** aplikasi frontend SPA berbasis komponen React dengan struktur standar Vite. Menggunakan kontak resmi WhatsApp `+62 877-4248-6612`, alamat `Jl. H. Ikap 1 No.43, Sampit`, surel `bimbelmumtaz01@gmail.com`, dan jam operasional `Senin-Minggu, 08.00 - 21.00`.
 
 ## Alur utama
 
