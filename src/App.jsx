@@ -16,9 +16,9 @@ export default function App() {
   useLandingAnimations();
 
   return (
-    <>
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden relative bg-white">
       <Navbar />
-      <main className="w-full">
+      <main className="w-full max-w-full overflow-x-clip relative">
         <HeroSection />
         <AboutSection />
         <TestimoniSection />
@@ -31,6 +31,6 @@ export default function App() {
       </main>
       <Footer />
       <FloatingWhatsApp />
-    </>
+    </div>
   );
 }

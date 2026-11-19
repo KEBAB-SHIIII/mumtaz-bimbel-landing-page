@@ -131,7 +131,7 @@ export default function TestimoniSection() {
   };
 
   return (
-    <section className="section-testimoni overflow-hidden" id="testimoni">
+    <section className="section-testimoni overflow-hidden w-full max-w-full" id="testimoni">
       <div className="max-w-[1140px] mx-auto px-5 sm:px-8">
         {/* Header Section dengan Animasi Muncul Saat Scroll & Garis Kuas Terlukis */}
         <div className="text-center testi-header-spacing reveal-element delay-75">
@@ -188,21 +188,21 @@ export default function TestimoniSection() {
                   width="20"
                   height="20"
                   className="testi-quote-icon-sm mb-2 shrink-0"
-                  style={{ width: '20px', height: '20px', fill: '#94A3B8' }}
+                  style={{ width: '20px', height: '20px', fill: '#3B82F6' }}
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-xs sm:text-[13px] text-[#64748B] leading-relaxed line-clamp-5">
+                <p className="text-xs sm:text-[13px] text-[#1D4ED8] leading-relaxed line-clamp-5">
                   &ldquo;{prevItem.quote}&rdquo;
                 </p>
               </div>
               <div className="mt-4 text-center">
-                <p className="font-medium text-xs text-[#64748B] truncate">
+                <p className="font-semibold text-xs text-[#1E40AF] truncate">
                   {prevItem.name}
                 </p>
-                <p className="text-[11px] text-[#94A3B8] truncate mt-0.5">
+                <p className="text-[11px] text-[#3B82F6] truncate mt-0.5 font-medium">
                   {prevItem.level}
                 </p>
               </div>
@@ -316,7 +316,7 @@ export default function TestimoniSection() {
                 <h4 className="font-semibold text-sm sm:text-[14.5px] text-[#0B1F3B] tracking-tight">
                   {currentItem.name}
                 </h4>
-                <p className="text-xs text-[#64748B] mt-0.5">
+                <p className="text-xs text-[#2563EB] font-medium mt-0.5">
                   {currentItem.level}
                 </p>
               </div>
@@ -336,21 +336,21 @@ export default function TestimoniSection() {
                   width="20"
                   height="20"
                   className="testi-quote-icon-sm mb-2 shrink-0"
-                  style={{ width: '20px', height: '20px', fill: '#94A3B8' }}
+                  style={{ width: '20px', height: '20px', fill: '#3B82F6' }}
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-xs sm:text-[13px] text-[#64748B] leading-relaxed line-clamp-5">
+                <p className="text-xs sm:text-[13px] text-[#1D4ED8] leading-relaxed line-clamp-5">
                   &ldquo;{nextItem.quote}&rdquo;
                 </p>
               </div>
               <div className="mt-4 text-center">
-                <p className="font-medium text-xs text-[#64748B] truncate">
+                <p className="font-semibold text-xs text-[#1E40AF] truncate">
                   {nextItem.name}
                 </p>
-                <p className="text-[11px] text-[#94A3B8] truncate mt-0.5">
+                <p className="text-[11px] text-[#3B82F6] truncate mt-0.5 font-medium">
                   {nextItem.level}
                 </p>
               </div>

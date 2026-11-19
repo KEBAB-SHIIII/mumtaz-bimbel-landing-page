@@ -2,14 +2,16 @@ import React from 'react';
 
 export default function HeroSection() {
   return (
-    <section className="hero-section-gradient pt-32 sm:pt-36 pb-20 sm:pb-28 overflow-hidden" id="hero">
+    <section className="hero-section-gradient pt-32 sm:pt-36 pb-20 sm:pb-28 overflow-hidden w-full max-w-full" id="hero">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           <div className="lg:col-span-7 xl:col-span-7">
-            <h1 className="hero-item text-[34px] sm:text-5xl lg:text-[52px] font-extrabold text-[#0B1F3B] tracking-tight leading-[1.15]">
-              <span className="hero-title-part part-1 hero-gradient-text">Bimbel Mumtaz</span>{' '}
+            <h1 className="hero-main-title hero-item">
+              <span className="hero-title-part part-1 hero-gradient-text">
+                Privat Berkualitas,
+              </span>{' '}
               <span className="hero-title-part part-2 relative inline-block hero-gradient-text">
-                Sampit
+                Dekat &amp; Terpercaya!
                 <svg
                   className="hero-underline-svg"
                   viewBox="0 0 180 12"
@@ -25,8 +27,6 @@ export default function HeroSection() {
                   />
                 </svg>
               </span>
-              <br />
-              <span className="hero-title-part part-3">Privat Berkualitas, Dekat &amp; Terpercaya!</span>
             </h1>
 
             <p className="hero-item delay-150 text-[#475569] text-base sm:text-lg mt-6 max-w-2xl leading-relaxed">

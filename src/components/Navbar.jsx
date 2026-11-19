@@ -15,57 +15,26 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeHref, setActiveHref] = useState('#');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
 
-  const lastScrollY = useRef(0);
   const isNavClickScrolling = useRef(false);
   const navScrollTimer = useRef(null);
   const headerRef = useRef(null);
 
   const lockNavbarOnNavigate = (href) => {
     isNavClickScrolling.current = true;
-    setIsHidden(false);
     if (href) setActiveHref(href);
     if (navScrollTimer.current) clearTimeout(navScrollTimer.current);
     navScrollTimer.current = setTimeout(() => {
       isNavClickScrolling.current = false;
-      lastScrollY.current = window.scrollY;
     }, 900);
   };
 
   useEffect(() => {
-    const SCROLL_THRESHOLD = 6;
-    lastScrollY.current = window.scrollY;
-    setIsScrolled(window.scrollY > 30);
-
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 30);
-
-      if (isNavClickScrolling.current) {
-        setIsHidden(false);
-        lastScrollY.current = currentScrollY;
-        return;
-      }
-
-      if (currentScrollY <= 35) {
-        setIsHidden(false);
-        lastScrollY.current = currentScrollY;
-        return;
-      }
-
-      const diff = currentScrollY - lastScrollY.current;
-      if (Math.abs(diff) >= SCROLL_THRESHOLD) {
-        if (diff > 0) {
-          setIsHidden(true);
-          setMobileOpen(false);
-        } else {
-          setIsHidden(false);
-        }
-        lastScrollY.current = currentScrollY;
-      }
+      setIsScrolled(window.scrollY > 15);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -112,46 +81,46 @@ export default function Navbar() {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-[1240px] ${
-        isHidden ? 'navbar-hidden' : ''
-      }`}
+      className="fixed top-3 sm:top-4 lg:top-5 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-[1340px]"
     >
       <div
-        className={`bg-white/95 backdrop-blur border border-[#DBEAFE] rounded-full px-3.5 sm:px-5 py-2 flex items-center justify-between gap-2 xl:gap-3 transition-shadow duration-300 ${
+        className={`bg-white rounded-2xl px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 flex items-center justify-between gap-3 sm:gap-4 lg:gap-6 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.06),0_6px_12px_-4px_rgba(0,0,0,0.03)] border-0 outline-none transition-all duration-300 ${
           isScrolled ? 'navbar-scrolled' : ''
         }`}
       >
+        {/* Brand Logo & Title */}
         <a
-          className="flex items-center gap-2 shrink-0"
+          className="flex items-center gap-2.5 sm:gap-3 shrink-0 group"
           href="#"
           aria-label="Bimbel Mumtaz Sampit Beranda"
           onClick={() => lockNavbarOnNavigate('#')}
         >
-          <div className="w-9 h-9 rounded-full overflow-hidden border border-[#DBEAFE] shrink-0">
+          <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
             <img
               src="assets/images/logo-mumtaz.png"
               alt="Logo Bimbel Mumtaz"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               loading="eager"
             />
           </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5 leading-none">
-              <span className="text-base font-bold text-[#0B1F3B]">Bimbel Mumtaz</span>
-            </div>
-            <span className="text-[9px] font-medium uppercase tracking-wider text-[#2563EB] mt-0.5">
-              Les Privat ke Rumah
+          <div className="flex flex-col justify-center">
+            <span className="text-[15px] sm:text-lg lg:text-[21px] font-extrabold text-[#0B1F3B] tracking-tight leading-tight group-hover:text-[#2563EB] transition-colors whitespace-nowrap">
+              Bimbel Mumtaz
+            </span>
+            <span className="text-[10px] sm:text-[11px] lg:text-[11.5px] font-semibold text-[#2563EB] tracking-wide leading-none mt-0.5 sm:mt-1 whitespace-nowrap">
+              Les Privat ke Rumah Sampit
             </span>
           </div>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1" aria-label="Navigasi Utama">
+        {/* Nav Links (Desktop) */}
+        <nav className="hidden lg:flex items-center gap-2.5 xl:gap-5 2xl:gap-6" aria-label="Navigasi Utama">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => lockNavbarOnNavigate(item.href)}
-              className={`nav-link px-2.5 xl:px-3 py-1.5 text-xs xl:text-sm rounded-full whitespace-nowrap ${
+              className={`nav-link text-[13px] xl:text-[14.5px] whitespace-nowrap transition-colors ${
                 activeHref === item.href ? 'active' : ''
               }`}
             >
@@ -160,35 +129,44 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 shrink-0">
+        {/* Action Button & Mobile Toggle */}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
-            className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 xl:px-5 py-2 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-semibold transition-colors whitespace-nowrap"
+            className="nav-portal-btn"
             href="#portal-orang-tua"
           >
-            <span className="material-symbols-outlined text-[17px]">supervisor_account</span>
-            <span>Portal Orang Tua</span>
+            <span className="material-symbols-outlined text-[17px] sm:text-[19px]">supervisor_account</span>
+            <span>Portal<span className="nav-portal-text-extra"> Orang Tua</span></span>
+            <span className="text-[15px] sm:text-[17px] font-bold ml-0.5 leading-none">&rsaquo;</span>
           </a>
           <button
             type="button"
-            aria-label="Buka Menu Navigasi"
+            aria-label={mobileOpen ? 'Tutup Menu Navigasi' : 'Buka Menu Navigasi'}
             aria-expanded={mobileOpen}
             onClick={(e) => {
               e.stopPropagation();
               setMobileOpen((prev) => !prev);
             }}
-            className="lg:hidden w-9 h-9 rounded-full bg-[#F0F7FF] hover:bg-[#DBEAFE] flex items-center justify-center transition-colors cursor-pointer"
+            className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#F0F7FF] hover:bg-[#DBEAFE] active:bg-[#BFDBFE] flex items-center justify-center transition-colors cursor-pointer text-[#0B1F3B] shrink-0"
           >
-            <span className="material-symbols-outlined text-[22px]">
-              {mobileOpen ? 'close' : 'menu'}
-            </span>
+            {mobileOpen ? (
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       <div
         className={`${
-          mobileOpen ? '' : 'hidden'
-        } lg:hidden mt-2 bg-white border border-[#DBEAFE] rounded-3xl p-5 shadow-lg`}
+          mobileOpen ? 'block' : 'hidden'
+        } lg:hidden mt-2 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-100/80 max-h-[75vh] overflow-y-auto`}
       >
         <div className="flex flex-col gap-1 text-sm font-medium">
           {NAV_ITEMS.map((item) => (
@@ -199,22 +177,24 @@ export default function Navbar() {
                 lockNavbarOnNavigate(item.href);
                 setMobileOpen(false);
               }}
-              className={
+              className={`px-3.5 py-2.5 rounded-xl font-semibold text-sm transition-colors flex items-center justify-between ${
                 activeHref === item.href
-                  ? 'px-4 py-2.5 rounded-xl font-semibold bg-[#F0F7FF] text-[#2563EB]'
-                  : 'px-4 py-2.5 rounded-xl hover:bg-[#F0F7FF]'
-              }
+                  ? 'bg-[#F0F7FF] text-[#2563EB] font-bold'
+                  : 'text-[#0B1F3B] hover:bg-[#F8FAFC]'
+              }`}
             >
-              {item.label}
+              <span>{item.label}</span>
+              <span className="text-xs text-slate-400 font-bold">&rsaquo;</span>
             </a>
           ))}
           <a
-            className="mt-2 px-4 py-2.5 rounded-xl bg-[#2563EB] text-white font-semibold flex items-center justify-center gap-2"
+            className="mt-2 px-4 py-3 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold flex items-center justify-center gap-2 shadow-sm text-sm transition-colors"
             href="#portal-orang-tua"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="material-symbols-outlined text-[18px]">supervisor_account</span>
+            <span className="material-symbols-outlined text-[19px]">supervisor_account</span>
             <span>Portal Orang Tua</span>
+            <span className="text-base font-bold ml-0.5 leading-none">&rsaquo;</span>
           </a>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function GaleriSection() {
   return (
-    <section className="section-blue-galeri py-20 sm:py-28" id="galeri">
+    <section className="section-blue-galeri py-20 sm:py-28 overflow-hidden w-full max-w-full" id="galeri">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="reveal-element max-w-xl mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15]">

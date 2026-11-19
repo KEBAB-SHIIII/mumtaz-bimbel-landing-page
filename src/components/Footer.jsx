@@ -13,13 +13,13 @@ export const OFFICIAL_TIKTOK_URL = 'https://www.tiktok.com/@bimbelmumtazsampit';
 
 export default function Footer() {
   return (
-    <footer className="footer-clear-border pt-12 sm:pt-14 pb-20 sm:pb-24 text-sm text-white">
+    <footer className="footer-clear-border text-sm text-white overflow-hidden w-full max-w-full">
       <div className="max-w-[1140px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 items-start">
           {/* Kolom 1: Profil Brand */}
           <div>
-            <div className="flex items-center gap-3.5 mb-3.5">
-              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white">
                 <img
                   src="assets/images/logo-mumtaz.png"
                   alt="Logo Bimbel Mumtaz"
@@ -27,18 +27,10 @@ export default function Footer() {
                   loading="lazy"
                 />
               </div>
-              <div>
-                <h3 className="font-bold text-base sm:text-[19px] text-white leading-tight">
-                  Bimbel Mumtaz Sampit
-                </h3>
-                <span className="text-[10px] font-semibold tracking-wider uppercase text-[#93C5FD]">
-                  Privat Berkualitas, Dekat & Terpercaya!
-                </span>
-              </div>
+              <h3 className="font-bold text-base sm:text-[19px] text-white leading-tight">
+                Bimbel Mumtaz Sampit
+              </h3>
             </div>
-            <p className="text-white/80 text-xs sm:text-[13px] leading-relaxed">
-              Bimbingan belajar privat profesional dengan guru datang ke rumah di Sampit untuk jenjang TK, SD, SMP, SMA, dan mengaji Al-Qur'an.
-            </p>
           </div>
 
           {/* Kolom 2: Alamat & Operasional */}

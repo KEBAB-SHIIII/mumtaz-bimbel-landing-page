@@ -293,6 +293,16 @@
   transform: translate3d(32px, -14px, 0);
 }
 
+/* Cegah elemen terdorong horizontal di layar mobile/tablet (< 768px) */
+@media (max-width: 767px) {
+  .js-ready .reveal-left:not(.is-revealed):not([data-revealed="true"]),
+  .js-ready .reveal-left.from-top:not(.is-revealed):not([data-revealed="true"]),
+  .js-ready .reveal-right:not(.is-revealed):not([data-revealed="true"]),
+  .js-ready .reveal-right.from-top:not(.is-revealed):not([data-revealed="true"]) {
+    transform: translateY(16px) !important;
+  }
+}
+
 .js-ready .reveal-scale:not(.is-revealed):not([data-revealed="true"]) {
   opacity: 0;
   transform: scale(0.96) translateY(14px);
@@ -360,17 +370,9 @@
   transition-delay: 0s !important;
 }
 
-/* Navbar */
+/* Navbar: Selalu tampil mengambang dan tidak hilang saat digulir */
 header {
-  transition: translate 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
-  will-change: translate, opacity;
-}
-
-header.navbar-hidden {
-  --tw-translate-y: calc(-100% - 3rem) !important;
-  translate: -50% calc(-100% - 3rem) !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease !important;
 }
 
 .navbar-scrolled {
@@ -414,8 +416,7 @@ header.navbar-hidden {
     stroke-dashoffset: 0 !important;
   }
 
-  header,
-  header.navbar-hidden {
+  header {
     translate: -50% 0 !important;
     transform: none !important;
     opacity: 1 !important;

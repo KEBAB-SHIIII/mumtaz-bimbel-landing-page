@@ -76,7 +76,7 @@ export default function KontakSection() {
   };
 
   return (
-    <section className="section-blue-kontak py-20 sm:py-28" id="kontak">
+    <section className="section-blue-kontak py-20 sm:py-28 overflow-hidden w-full max-w-full" id="kontak">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="reveal-element contact-shell grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
           {/* Left Blue Card */}

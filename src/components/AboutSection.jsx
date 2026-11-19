@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <>
       {/* 1. Profil & Tentang Kami (Latar Putih Bersih) */}
-      <section className="pt-16 sm:pt-20 pb-16 sm:pb-20 bg-white overflow-hidden" id="tentang-kami">
+      <section className="pt-16 sm:pt-20 pb-16 sm:pb-20 bg-white overflow-hidden w-full max-w-full" id="tentang-kami">
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center about-profile-grid">
             {/* Sisi Kiri: Kolase 3 Foto Siswa & Tutor */}
@@ -57,7 +57,7 @@ export default function AboutSection() {
 
       {/* 2. Visi & Misi Bimbel Mumtaz (Latar Soft Blue Penuh Satu Layar) */}
       <section
-        className="section-blue-visimisi py-20 sm:py-24 overflow-hidden"
+        className="section-blue-visimisi py-20 sm:py-24 overflow-hidden w-full max-w-full"
         id="visi-misi"
         style={{ backgroundColor: '#F0F7FF' }}
       >
@@ -73,12 +73,13 @@ export default function AboutSection() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-            {/* Sisi Kiri: Visi (Animasi Muncul dari Kiri) */}
-            <div className="reveal-left delay-150 lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 about-visi-card relative">
-              <div>
+            {/* Sisi Kiri: Visi & Banner Foto Bimbingan (Tinggi Pas Sejajar dengan Misi) */}
+            <div className="reveal-left delay-150 lg:col-span-5 flex flex-col gap-4 sm:gap-5 h-full">
+              {/* Kartu Visi: Tinggi proporsional dengan padding lega tidak mepet */}
+              <div className="about-visi-card p-6 sm:p-7 xl:p-8 shrink-0 flex flex-col justify-between">
                 {/* Header Visi dengan Logo Resmi Bimbel Mumtaz */}
-                <div className="flex items-center gap-3.5 mb-5">
-                  <div className="w-12 h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs">
+                <div className="flex items-center gap-3.5 mb-4 sm:mb-5">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
                     <img
                       src="assets/images/logo-mumtaz.png"
                       alt="Logo Bimbel Mumtaz"
@@ -87,67 +88,89 @@ export default function AboutSection() {
                     />
                   </div>
                   <div>
-                    <h4 className="text-xl font-extrabold text-[#0B1F3B] tracking-tight">Visi</h4>
+                    <h4 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Visi</h4>
                   </div>
                 </div>
 
-                {/* Kutipan Visi */}
-                <blockquote className="text-base sm:text-[17px] font-bold text-[#0B1F3B] leading-relaxed">
+                {/* Kutipan Visi dengan Jarak Lega */}
+                <blockquote className="text-[14.5px] sm:text-[15.5px] xl:text-[16px] font-bold text-[#0B1F3B] leading-relaxed pb-1 sm:pb-2">
                   &ldquo;Menjadi lembaga bimbingan belajar terdepan dan terpercaya dalam mencetak generasi yang cerdas, berprestasi, dan berakhlak mulia.&rdquo;
                 </blockquote>
               </div>
+
+              {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}
+              <div className="about-visi-image-card group">
+                <img
+                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80"
+                  alt="Suasana belajar bimbingan Mumtaz"
+                  className="transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
             </div>
 
-            {/* Sisi Kanan: Misi */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
-              {/* Header Misi */}
-              <div className="reveal-right delay-100 mb-4 px-1">
-                <h4 className="text-xl font-extrabold text-[#0B1F3B] tracking-tight">Misi</h4>
-              </div>
-
-              {/* Daftar 3 Kartu Misi: Satu kali scroll langsung memicu animasi berurutan untuk semua kartu */}
-              <div className="space-y-3 reveal-right delay-150 misi-stagger-group">
-                {/* Misi 1 - Pembelajaran Adaptif */}
-                <div className="misi-stagger-item">
-                  <div className="about-misi-item flex items-start gap-3.5 sm:gap-4 p-4">
-                    <div className="w-8 h-8 rounded-xl bg-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs" aria-hidden="true">
-                      01
-                    </div>
-                    <div>
-                      <h5 className="text-sm sm:text-[15px] font-bold text-[#0B1F3B]">Pembelajaran Adaptif &amp; Personal</h5>
-                      <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
-                        Menyediakan metode pembelajaran privat yang adaptif, menyenangkan, dan berfokus pada kebutuhan individu siswa <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">(1-on-1)</span>.
-                      </p>
-                    </div>
+            {/* Sisi Kanan: Misi (Kotak Double Warna Putih Sebagai Latar) */}
+            <div className="lg:col-span-7 h-full">
+              <div className="about-misi-outer-card p-6 sm:p-7 xl:p-8 h-full flex flex-col justify-between">
+                {/* Header Misi dengan Logo Resmi Bimbel Mumtaz */}
+                <div className="flex items-center gap-3.5 mb-5 px-1 reveal-right delay-100">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
+                    <img
+                      src="assets/images/logo-mumtaz.png"
+                      alt="Logo Bimbel Mumtaz"
+                      className="w-full h-full object-contain p-1"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Misi</h4>
                   </div>
                 </div>
 
-                {/* Misi 2 - Pengajar Profesional */}
-                <div className="misi-stagger-item">
-                  <div className="about-misi-item flex items-start gap-3.5 sm:gap-4 p-4">
-                    <div className="w-8 h-8 rounded-xl bg-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs" aria-hidden="true">
-                      02
-                    </div>
-                    <div>
-                      <h5 className="text-sm sm:text-[15px] font-bold text-[#0B1F3B]">Pengajar Profesional &amp; Sabar</h5>
-                      <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
-                        Menghadirkan tenaga pengajar yang profesional, sabar, dan berpengalaman menghadapi berbagai karakter anak.
-                      </p>
+                {/* Daftar 3 Kartu Misi: Satu kali scroll langsung memicu animasi berurutan untuk semua kartu */}
+                <div className="space-y-3.5 sm:space-y-4 reveal-right delay-150 misi-stagger-group flex-1 flex flex-col justify-between">
+                  {/* Misi 1 - Pembelajaran Adaptif */}
+                  <div className="misi-stagger-item">
+                    <div className="about-misi-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-4.5">
+                      <div className="w-8 h-8 rounded-xl bg-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs" aria-hidden="true">
+                        01
+                      </div>
+                      <div>
+                        <h5 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pembelajaran Adaptif &amp; Personal</h5>
+                        <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
+                          Menyediakan metode pembelajaran privat yang adaptif, menyenangkan, dan berfokus pada kebutuhan individu siswa <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">(1-on-1)</span>.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Misi 3 - Akademik & Mengaji */}
-                <div className="misi-stagger-item">
-                  <div className="about-misi-item flex items-start gap-3.5 sm:gap-4 p-4">
-                    <div className="w-8 h-8 rounded-xl bg-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs" aria-hidden="true">
-                      03
+                  {/* Misi 2 - Pengajar Profesional */}
+                  <div className="misi-stagger-item">
+                    <div className="about-misi-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-4.5">
+                      <div className="w-8 h-8 rounded-xl bg-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs" aria-hidden="true">
+                        02
+                      </div>
+                      <div>
+                        <h5 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pengajar Profesional &amp; Sabar</h5>
+                        <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
+                          Menghadirkan tenaga pengajar yang profesional, sabar, dan berpengalaman menghadapi berbagai karakter anak.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className="text-sm sm:text-[15px] font-bold text-[#0B1F3B]">Pendampingan Akademik &amp; Mengaji</h5>
-                      <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
-                        Mengintegrasikan pendampingan akademik secara menyeluruh, mulai dari pelajaran sekolah umum hingga bimbingan mengaji.
-                      </p>
+                  </div>
+
+                  {/* Misi 3 - Akademik & Mengaji */}
+                  <div className="misi-stagger-item">
+                    <div className="about-misi-item flex items-start gap-3.5 sm:gap-4 p-4 sm:p-4.5">
+                      <div className="w-8 h-8 rounded-xl bg-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs" aria-hidden="true">
+                        03
+                      </div>
+                      <div>
+                        <h5 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pendampingan Akademik &amp; Mengaji</h5>
+                        <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
+                          Mengintegrasikan pendampingan akademik secara menyeluruh, mulai dari pelajaran sekolah umum hingga bimbingan mengaji.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

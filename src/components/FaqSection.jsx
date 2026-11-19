@@ -47,7 +47,7 @@ export default function FaqSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-20 sm:py-28 bg-white" id="faq">
+    <section className="py-20 sm:py-28 bg-white overflow-hidden w-full max-w-full" id="faq">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="reveal-element max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15] text-[#0B1F3B]">

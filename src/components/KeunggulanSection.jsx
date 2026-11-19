@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function KeunggulanSection() {
   return (
-    <section className="py-20 sm:py-28 bg-white" id="keunggulan">
+    <section className="py-20 sm:py-28 bg-white overflow-hidden w-full max-w-full" id="keunggulan">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="reveal-left lg:col-span-5">
