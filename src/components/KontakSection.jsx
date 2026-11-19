@@ -244,7 +244,7 @@ export default function KontakSection() {
                   <input
                     className="form-field"
                     id="homeAddress"
-                    placeholder="Contoh: Jl. H. Ikap No.1"
+                    placeholder="Contoh: Jl. H. Ikap 1 No. 43"
                     required
                     type="text"
                     value={homeAddress}

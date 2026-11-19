@@ -3,7 +3,7 @@ import React from 'react';
 export const OFFICIAL_WA_NUMBER = '6287742486612';
 export const OFFICIAL_WA_DISPLAY = '+62 877-4248-6612';
 export const OFFICIAL_ADDRESS =
-  'Jl. H. Ikap No.1, Mentawa Baru Hilir, Kec. Mentawa Baru Ketapang, Kabupaten Kotawaringin Timur, Kalimantan Tengah 74321, Indonesia';
+  'Jl. H. Ikap 1 No. 43, Mentawa Baru Hilir, Kec. Mentawa Baru Ketapang, Kabupaten Kotawaringin Timur, Kalimantan Tengah 74321, Indonesia';
 export const OFFICIAL_HOURS = 'Senin-Minggu, 08.00 - 21.00';
 export const OFFICIAL_EMAIL = 'bimbelmumtaz01@gmail.com';
 export const OFFICIAL_INSTAGRAM_HANDLE = '@bimbel_mumtaz_sampit';

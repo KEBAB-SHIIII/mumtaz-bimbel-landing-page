@@ -76,7 +76,7 @@ export default function AboutSection() {
             {/* Sisi Kiri: Visi & Banner Foto Bimbingan (Tinggi Pas Sejajar dengan Misi) */}
             <div className="reveal-left delay-150 lg:col-span-5 flex flex-col gap-4 sm:gap-5 h-full">
               {/* Kartu Visi: Tinggi proporsional dengan padding lega tidak mepet */}
-              <div className="about-visi-card p-6 sm:p-7 xl:p-8 shrink-0 flex flex-col justify-between">
+              <div className="about-visi-card order-2 lg:order-1 p-6 sm:p-7 xl:p-8 shrink-0 flex flex-col justify-between">
                 {/* Header Visi dengan Logo Resmi Bimbel Mumtaz */}
                 <div className="flex items-center gap-3.5 mb-4 sm:mb-5">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
@@ -99,7 +99,7 @@ export default function AboutSection() {
               </div>
 
               {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}
-              <div className="about-visi-image-card group">
+              <div className="about-visi-image-card order-1 lg:order-2 group">
                 <img
                   src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80"
                   alt="Suasana belajar bimbingan Mumtaz"

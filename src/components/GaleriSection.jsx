@@ -1,5 +1,48 @@
 import React from 'react';
 
+const GALLERY_PHOTOS = [
+  {
+    src: './assets/images/Belajar_Fokus.jpeg',
+    alt: 'Pendampingan belajar anak di rumah',
+    caption: 'Pendampingan telaten',
+    delayClass: '',
+    slotClass: 'gallery-slot-hero',
+    objectPosition: 'center 25%',
+  },
+  {
+    src: './assets/images/belajarfokus.jpg',
+    alt: 'Diskusi soal latihan',
+    caption: 'Diskusi soal',
+    delayClass: 'delay-100',
+    slotClass: 'gallery-slot-land-top',
+    objectPosition: 'center 20%',
+  },
+  {
+    src: './assets/images/mengerjakansoal.jpeg',
+    alt: 'Latihan soal terarah',
+    caption: 'Latihan soal',
+    delayClass: 'delay-150',
+    slotClass: 'gallery-slot-land-bottom',
+    objectPosition: 'center 10%',
+  },
+  {
+    src: './assets/images/foto_mengaji.jpeg',
+    alt: 'Bimbingan mengaji',
+    caption: 'Bimbingan mengaji',
+    delayClass: 'delay-200',
+    slotClass: 'gallery-slot-mengaji',
+    objectPosition: 'center 35%',
+  },
+  {
+    src: './assets/images/belajar_fokus.jpg',
+    alt: 'Belajar fokus bersama tutor',
+    caption: 'Belajar fokus',
+    delayClass: 'delay-250',
+    slotClass: 'gallery-slot-fokus',
+    objectPosition: 'center 22%',
+  },
+];
+
 export default function GaleriSection() {
   return (
     <section className="section-blue-galeri py-20 sm:py-28 overflow-hidden w-full max-w-full" id="galeri">
@@ -11,47 +54,21 @@ export default function GaleriSection() {
           <p className="text-[#475569] mt-4">Suasana bimbingan belajar Mumtaz.</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] sm:auto-rows-[190px] gap-3 sm:gap-4">
-          <figure className="gallery-item reveal-scale col-span-2 row-span-2">
-            <img
-              src="./assets/images/Belajar_Fokus.jpeg"
-              alt="Pendampingan belajar anak di rumah"
-              loading="lazy"
-            />
-            <figcaption>Pendampingan telaten</figcaption>
-          </figure>
-          <figure className="gallery-item reveal-scale delay-100">
-            <img
-              src="./assets/images/belajarfokus.jpg"
-              alt="Diskusi soal latihan"
-              loading="lazy"
-            />
-            <figcaption>Diskusi soal</figcaption>
-          </figure>
-          <figure className="gallery-item reveal-scale delay-200">
-            <img
-              src="./assets/images/foto_mengaji.jpeg"
-              alt="Bimbingan mengaji"
-              loading="lazy"
-            />
-            <figcaption>Bimbingan mengaji</figcaption>
-          </figure>
-          <figure className="gallery-item reveal-scale delay-100">
-            <img
-              src="./assets/images/belajar_fokus.jpg" 
-              alt="Belajar fokus bersama tutor"
-              loading="lazy"
-            />
-            <figcaption>Belajar fokus</figcaption>
-          </figure>
-          <figure className="gallery-item reveal-scale delay-200">
-            <img
-              src="./assets/images/mengerjakansoal.jpeg" 
-              alt="Latihan soal terarah"
-              loading="lazy"
-            />
-            <figcaption>Latihan soal</figcaption>
-          </figure>
+        <div className="gallery-bento">
+          {GALLERY_PHOTOS.map((photo) => (
+            <figure
+              key={photo.src}
+              className={`gallery-item reveal-scale ${photo.slotClass} ${photo.delayClass}`.trim()}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                style={{ objectPosition: photo.objectPosition }}
+                loading="lazy"
+              />
+              <figcaption>{photo.caption}</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
