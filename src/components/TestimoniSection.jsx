@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export const TESTIMONIALS_DATA = [
   {
@@ -87,48 +87,196 @@ export const TESTIMONIALS_DATA = [
   },
 ];
 
+function FadedTestimoniCard({ item, onSelect, ariaLabel }) {
+  return (
+    <div
+      onClick={onSelect}
+      className="testi-card-faded"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onSelect();
+        }
+      }}
+      aria-label={ariaLabel}
+    >
+      <div>
+        <svg
+          width="20"
+          height="20"
+          className="testi-quote-icon-sm mb-2 shrink-0"
+          style={{ width: '20px', height: '20px', fill: '#94A3B8' }}
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+        </svg>
+        <p className="testi-card-faded-quote">
+          &ldquo;{item.quote}&rdquo;
+        </p>
+      </div>
+      <div className="mt-4 text-center">
+        <p className="testi-card-faded-name">
+          {item.name}
+        </p>
+        <p className="testi-card-faded-level">
+          {item.level}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ActiveTestimoniCard({ item }) {
+  return (
+    <article
+      className="testi-card-active"
+      style={{
+        background: 'linear-gradient(135deg, #F0F7FF 0%, #DFEEFE 45%, #BFDCFE 100%)',
+        color: '#0B1F3B',
+        borderRadius: '24px',
+        border: '1.5px solid #93C5FD',
+        boxShadow: '0 20px 45px -12px rgba(37, 99, 235, 0.22), 0 4px 12px -2px rgba(37, 99, 235, 0.08)',
+      }}
+    >
+      <div>
+        {/* Ikon Kutipan Berwarna Biru Mumtaz */}
+        <svg
+          width="26"
+          height="26"
+          className="testi-quote-icon mb-3 shrink-0"
+          style={{
+            width: '26px',
+            height: '26px',
+            maxWidth: '26px',
+            maxHeight: '26px',
+            fill: '#2563EB',
+          }}
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+        </svg>
+
+        {/* Teks Ulasan Profesional */}
+        <blockquote
+          className="text-[15px] sm:text-[16.5px] leading-relaxed font-semibold text-[#0B1F3B]"
+          style={{ color: '#0B1F3B' }}
+        >
+          &ldquo;{item.quote}&rdquo;
+        </blockquote>
+      </div>
+
+      {/* Segitiga / Ekor Balon Chat */}
+      <div
+        className="testi-bubble-tail"
+        style={{
+          backgroundColor: '#BFDCFE',
+          borderBottom: '1.5px solid #93C5FD',
+          borderRight: '1.5px solid #93C5FD',
+        }}
+        aria-hidden="true"
+      ></div>
+    </article>
+  );
+}
+
+function ActiveTestimoniAuthor({ item }) {
+  return (
+    <div className="text-center">
+      <h4 className="font-semibold text-sm sm:text-[14.5px] text-[#0B1F3B] tracking-tight">
+        {item.name}
+      </h4>
+      <p className="text-xs text-[#2563EB] font-medium mt-0.5">
+        {item.level}
+      </p>
+    </div>
+  );
+}
+
 export default function TestimoniSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState('next');
-  const [animKey, setAnimKey] = useState(0);
+  const [slideState, setSlideState] = useState({
+    current: 0,
+    prev: null,
+    dir: 'next',
+    seq: 0,
+  });
   const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
 
   const total = TESTIMONIALS_DATA.length;
 
-  const getIndex = (offset) => {
-    return (activeIndex + offset + total) % total;
+  const getIndex = (baseIndex, offset) => {
+    return (baseIndex + offset + total) % total;
   };
 
-  const prevItem = TESTIMONIALS_DATA[getIndex(-1)];
-  const currentItem = TESTIMONIALS_DATA[activeIndex];
-  const nextItem = TESTIMONIALS_DATA[getIndex(1)];
+  useEffect(() => {
+    if (slideState.prev === null) return;
+    const timer = setTimeout(() => {
+      setSlideState((s) => ({ ...s, prev: null }));
+    }, 470);
+    return () => clearTimeout(timer);
+  }, [slideState.seq, slideState.prev]);
 
   const handlePrev = () => {
-    setSlideDirection('prev');
-    setActiveIndex((prev) => (prev <= 0 ? total - 1 : prev - 1));
-    setAnimKey((k) => k + 1);
+    setSlideState((s) => ({
+      current: s.current <= 0 ? total - 1 : s.current - 1,
+      prev: s.current,
+      dir: 'prev',
+      seq: s.seq + 1,
+    }));
   };
 
   const handleNext = () => {
-    setSlideDirection('next');
-    setActiveIndex((prev) => (prev >= total - 1 ? 0 : prev + 1));
-    setAnimKey((k) => k + 1);
+    setSlideState((s) => ({
+      current: s.current >= total - 1 ? 0 : s.current + 1,
+      prev: s.current,
+      dir: 'next',
+      seq: s.seq + 1,
+    }));
   };
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
   };
 
   const handleTouchEnd = (e) => {
-    if (touchStartX.current === null) return;
-    const diff = touchStartX.current - e.changedTouches[0].clientX;
-    if (diff > 45) {
-      handleNext();
-    } else if (diff < -45) {
-      handlePrev();
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const diffX = touchStartX.current - e.changedTouches[0].clientX;
+    const diffY = touchStartY.current - e.changedTouches[0].clientY;
+    if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY) * 1.2) {
+      if (diffX > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
     }
     touchStartX.current = null;
+    touchStartY.current = null;
   };
+
+  const enterAnimClass =
+    slideState.seq > 0
+      ? slideState.dir === 'next'
+        ? 'testi-push-in-right'
+        : 'testi-push-in-left'
+      : '';
+  const exitAnimClass =
+    slideState.dir === 'next' ? 'testi-push-out-left' : 'testi-push-out-right';
+
+  const prevItem = TESTIMONIALS_DATA[getIndex(slideState.current, -1)];
+  const currentItem = TESTIMONIALS_DATA[slideState.current];
+  const nextItem = TESTIMONIALS_DATA[getIndex(slideState.current, 1)];
+
+  const exitingPrevItem =
+    slideState.prev !== null ? TESTIMONIALS_DATA[getIndex(slideState.prev, -1)] : null;
+  const exitingCurrentItem =
+    slideState.prev !== null ? TESTIMONIALS_DATA[slideState.prev] : null;
+  const exitingNextItem =
+    slideState.prev !== null ? TESTIMONIALS_DATA[getIndex(slideState.prev, 1)] : null;
 
   return (
     <section className="section-testimoni overflow-hidden w-full max-w-full" id="testimoni">
@@ -174,43 +322,38 @@ export default function TestimoniSection() {
           onTouchEnd={handleTouchEnd}
         >
           <div className="testi-3col-grid">
-            {/* KARTU KIRI: Testimoni Sebelumnya (Pudar, Animasi Masuk dari Kiri Saat Scroll) */}
-            <div
-              onClick={handlePrev}
-              className="testi-card-faded reveal-left delay-150"
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && handlePrev()}
-              aria-label={`Pilih testimoni sebelumnya dari ${prevItem.name}`}
-            >
-              <div>
-                <svg
-                  width="20"
-                  height="20"
-                  className="testi-quote-icon-sm mb-2 shrink-0"
-                  style={{ width: '20px', height: '20px', fill: '#3B82F6' }}
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
+            {/* KARTU KIRI: Testimoni Sebelumnya (Pudar Abu-abu, Tersembunyi di Mobile) */}
+            <div className="testi-side-col reveal-left delay-150">
+              <div className="testi-side-viewport">
+                {exitingPrevItem && (
+                  <div
+                    key={`exit-left-${slideState.seq}`}
+                    className={`testi-slide-layer testi-side-exit ${exitAnimClass}`}
+                    aria-hidden="true"
+                  >
+                    <FadedTestimoniCard
+                      item={exitingPrevItem}
+                      onSelect={handlePrev}
+                      ariaLabel={`Pilih testimoni sebelumnya dari ${exitingPrevItem.name}`}
+                    />
+                  </div>
+                )}
+                <div
+                  key={`enter-left-${slideState.seq}`}
+                  className={`testi-slide-layer ${enterAnimClass}`}
                 >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="text-xs sm:text-[13px] text-[#1D4ED8] leading-relaxed line-clamp-5">
-                  &ldquo;{prevItem.quote}&rdquo;
-                </p>
-              </div>
-              <div className="mt-4 text-center">
-                <p className="font-semibold text-xs text-[#1E40AF] truncate">
-                  {prevItem.name}
-                </p>
-                <p className="text-[11px] text-[#3B82F6] truncate mt-0.5 font-medium">
-                  {prevItem.level}
-                </p>
+                  <FadedTestimoniCard
+                    item={prevItem}
+                    onSelect={handlePrev}
+                    ariaLabel={`Pilih testimoni sebelumnya dari ${prevItem.name}`}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* KARTU TENGAH: Testimoni Terpilih (Animasi Pop Muncul Saat Scroll & Transisi Halus Saat Ganti) */}
-            <div className="relative reveal-pop delay-200">
-              {/* Pembungkus Balon Chat dengan Tombol Panah Melayang di Sisi Kiri & Kanan */}
+            {/* KARTU TENGAH: Testimoni Terpilih (Transisi Geser Penuh Ala PPT) */}
+            <div className="testi-center-col relative reveal-pop delay-200">
+              {/* Pembungkus Balon Chat dengan Tombol Panah Tetap di Sisi Kiri & Kanan */}
               <div className="relative">
                 {/* Tombol Panah Kiri di Pinggir Kartu */}
                 <button
@@ -254,105 +397,71 @@ export default function TestimoniSection() {
                   </svg>
                 </button>
 
-                <article
-                  className="testi-card-active"
-                  style={{
-                    background: 'linear-gradient(135deg, #F0F7FF 0%, #DFEEFE 45%, #BFDCFE 100%)',
-                    color: '#0B1F3B',
-                    borderRadius: '24px',
-                    border: '1.5px solid #93C5FD',
-                    boxShadow: '0 20px 45px -12px rgba(37, 99, 235, 0.22), 0 4px 12px -2px rgba(37, 99, 235, 0.08)',
-                  }}
-                >
-                  <div
-                    key={animKey}
-                    className={slideDirection === 'next' ? 'testi-anim-next' : 'testi-anim-prev'}
-                  >
-                    {/* Ikon Kutipan Berwarna Biru Mumtaz */}
-                    <svg
-                      width="26"
-                      height="26"
-                      className="testi-quote-icon mb-3 shrink-0"
-                      style={{
-                        width: '26px',
-                        height: '26px',
-                        maxWidth: '26px',
-                        maxHeight: '26px',
-                        fill: '#2563EB',
-                      }}
-                      viewBox="0 0 24 24"
+                <div className="testi-slide-viewport">
+                  {exitingCurrentItem && (
+                    <div
+                      key={`exit-center-${slideState.seq}`}
+                      className={`testi-slide-layer testi-slide-exit ${exitAnimClass}`}
                       aria-hidden="true"
                     >
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
-
-                    {/* Teks Ulasan Profesional */}
-                    <blockquote
-                      className="text-[15px] sm:text-[16.5px] leading-relaxed font-semibold text-[#0B1F3B]"
-                      style={{ color: '#0B1F3B' }}
-                    >
-                      &ldquo;{currentItem.quote}&rdquo;
-                    </blockquote>
-                  </div>
-
-                  {/* Segitiga / Ekor Balon Chat */}
+                      <ActiveTestimoniCard item={exitingCurrentItem} />
+                    </div>
+                  )}
                   <div
-                    className="testi-bubble-tail"
-                    style={{
-                      backgroundColor: '#BFDCFE',
-                      borderBottom: '1.5px solid #93C5FD',
-                      borderRight: '1.5px solid #93C5FD',
-                    }}
-                    aria-hidden="true"
-                  ></div>
-                </article>
+                    key={`enter-center-${slideState.seq}`}
+                    className={`testi-slide-layer ${enterAnimClass}`}
+                  >
+                    <ActiveTestimoniCard item={currentItem} />
+                  </div>
+                </div>
               </div>
 
               {/* Identitas Pengulas di Bawah Balon */}
-              <div
-                key={`author-${animKey}`}
-                className={`text-center mt-4 sm:mt-5 ${slideDirection === 'next' ? 'testi-anim-next' : 'testi-anim-prev'}`}
-              >
-                <h4 className="font-semibold text-sm sm:text-[14.5px] text-[#0B1F3B] tracking-tight">
-                  {currentItem.name}
-                </h4>
-                <p className="text-xs text-[#2563EB] font-medium mt-0.5">
-                  {currentItem.level}
-                </p>
+              <div className="testi-author-viewport">
+                {exitingCurrentItem && (
+                  <div
+                    key={`exit-author-${slideState.seq}`}
+                    className={`testi-slide-layer testi-author-exit ${exitAnimClass}`}
+                    aria-hidden="true"
+                  >
+                    <ActiveTestimoniAuthor item={exitingCurrentItem} />
+                  </div>
+                )}
+                <div
+                  key={`enter-author-${slideState.seq}`}
+                  className={`testi-slide-layer ${enterAnimClass}`}
+                >
+                  <ActiveTestimoniAuthor item={currentItem} />
+                </div>
               </div>
             </div>
 
-            {/* KARTU KANAN: Testimoni Berikutnya (Pudar, Animasi Masuk dari Kanan Saat Scroll) */}
-            <div
-              onClick={handleNext}
-              className="testi-card-faded reveal-right delay-250"
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && handleNext()}
-              aria-label={`Pilih testimoni berikutnya dari ${nextItem.name}`}
-            >
-              <div>
-                <svg
-                  width="20"
-                  height="20"
-                  className="testi-quote-icon-sm mb-2 shrink-0"
-                  style={{ width: '20px', height: '20px', fill: '#3B82F6' }}
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
+            {/* KARTU KANAN: Testimoni Berikutnya (Pudar Abu-abu, Tersembunyi di Mobile) */}
+            <div className="testi-side-col reveal-right delay-250">
+              <div className="testi-side-viewport">
+                {exitingNextItem && (
+                  <div
+                    key={`exit-right-${slideState.seq}`}
+                    className={`testi-slide-layer testi-side-exit ${exitAnimClass}`}
+                    aria-hidden="true"
+                  >
+                    <FadedTestimoniCard
+                      item={exitingNextItem}
+                      onSelect={handleNext}
+                      ariaLabel={`Pilih testimoni berikutnya dari ${exitingNextItem.name}`}
+                    />
+                  </div>
+                )}
+                <div
+                  key={`enter-right-${slideState.seq}`}
+                  className={`testi-slide-layer ${enterAnimClass}`}
                 >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="text-xs sm:text-[13px] text-[#1D4ED8] leading-relaxed line-clamp-5">
-                  &ldquo;{nextItem.quote}&rdquo;
-                </p>
-              </div>
-              <div className="mt-4 text-center">
-                <p className="font-semibold text-xs text-[#1E40AF] truncate">
-                  {nextItem.name}
-                </p>
-                <p className="text-[11px] text-[#3B82F6] truncate mt-0.5 font-medium">
-                  {nextItem.level}
-                </p>
+                  <FadedTestimoniCard
+                    item={nextItem}
+                    onSelect={handleNext}
+                    ariaLabel={`Pilih testimoni berikutnya dari ${nextItem.name}`}
+                  />
+                </div>
               </div>
             </div>
           </div>
