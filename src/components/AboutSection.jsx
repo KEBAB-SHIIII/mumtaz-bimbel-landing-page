@@ -94,7 +94,7 @@ export default function AboutSection() {
 
                 {/* Kotak Dalam (Inner Card) Kutipan Visi Senada dengan Item Misi */}
                 <div className="about-visi-inner-card p-4 sm:p-5">
-                  <blockquote className="text-[14px] sm:text-[15px] xl:text-[15.5px] font-bold text-[#0B1F3B] leading-relaxed">
+                  <blockquote className="text-[13.5px] sm:text-[14.5px] xl:text-[15px] font-normal text-[#475569] leading-relaxed">
                     &ldquo;Menjadi lembaga bimbingan belajar terdepan dan terpercaya dalam mencetak generasi yang cerdas, berprestasi, dan berakhlak mulia.&rdquo;
                   </blockquote>
                 </div>

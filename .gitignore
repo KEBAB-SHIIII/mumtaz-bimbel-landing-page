@@ -8,3 +8,8 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# Anti-slop audit & files
+anti-slop/
+antislop.md
+skills/antislop*
