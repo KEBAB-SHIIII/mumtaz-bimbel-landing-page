@@ -5,41 +5,46 @@ const GALLERY_PHOTOS = [
     src: './assets/images/Belajar_Fokus.jpeg',
     alt: 'Pendampingan belajar anak di rumah',
     caption: 'Pendampingan telaten',
-    delayClass: '',
     slotClass: 'gallery-slot-hero',
     objectPosition: 'center 25%',
+    width: 600,
+    height: 750,
   },
   {
     src: './assets/images/belajarfokus.jpg',
     alt: 'Diskusi soal latihan',
     caption: 'Diskusi soal',
-    delayClass: 'delay-100',
     slotClass: 'gallery-slot-land-top',
     objectPosition: 'center 20%',
+    width: 600,
+    height: 400,
   },
   {
     src: './assets/images/mengerjakansoal.jpeg',
     alt: 'Latihan soal terarah',
     caption: 'Latihan soal',
-    delayClass: 'delay-150',
     slotClass: 'gallery-slot-land-bottom',
     objectPosition: 'center 10%',
+    width: 600,
+    height: 400,
   },
   {
     src: './assets/images/foto_mengaji.jpeg',
     alt: 'Bimbingan mengaji',
     caption: 'Bimbingan mengaji',
-    delayClass: 'delay-200',
     slotClass: 'gallery-slot-mengaji',
     objectPosition: 'center 35%',
+    width: 600,
+    height: 750,
   },
   {
     src: './assets/images/belajar_fokus.jpg',
     alt: 'Belajar fokus bersama tutor',
     caption: 'Belajar fokus',
-    delayClass: 'delay-250',
     slotClass: 'gallery-slot-fokus',
     objectPosition: 'center 22%',
+    width: 600,
+    height: 750,
   },
 ];
 
@@ -54,15 +59,18 @@ export default function GaleriSection() {
           <p className="text-[#475569] mt-4">Suasana bimbingan belajar Mumtaz.</p>
         </div>
 
-        <div className="gallery-bento">
+        {/* Satu kali scroll pada kontainer galeri langsung memicu animasi berurutan untuk ke-5 foto */}
+        <div className="gallery-bento reveal-element gallery-stagger-group">
           {GALLERY_PHOTOS.map((photo) => (
             <figure
               key={photo.src}
-              className={`gallery-item reveal-scale ${photo.slotClass} ${photo.delayClass}`.trim()}
+              className={`gallery-item gallery-stagger-item ${photo.slotClass}`.trim()}
             >
               <img
                 src={photo.src}
                 alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
                 style={{ objectPosition: photo.objectPosition }}
                 loading="lazy"
               />

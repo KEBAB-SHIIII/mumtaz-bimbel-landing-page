@@ -75,10 +75,10 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
             {/* Sisi Kiri: Visi & Banner Foto Bimbingan (Tinggi Pas Sejajar dengan Misi) */}
             <div className="reveal-left delay-150 lg:col-span-5 flex flex-col gap-4 sm:gap-5 h-full">
-              {/* Kartu Visi: Tinggi proporsional dengan padding lega tidak mepet */}
+              {/* Kartu Visi: Kotak Double Warna Putih + Inner Card Soft Blue Senada dengan Misi */}
               <div className="about-visi-card order-2 lg:order-1 p-6 sm:p-7 xl:p-8 shrink-0 flex flex-col justify-between">
                 {/* Header Visi dengan Logo Resmi Bimbel Mumtaz */}
-                <div className="flex items-center gap-3.5 mb-4 sm:mb-5">
+                <div className="flex items-center gap-3.5 mb-5 px-1">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
                     <img
                       src="assets/images/logo-mumtaz.png"
@@ -92,10 +92,12 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                {/* Kutipan Visi dengan Jarak Lega */}
-                <blockquote className="text-[14.5px] sm:text-[15.5px] xl:text-[16px] font-bold text-[#0B1F3B] leading-relaxed pb-1 sm:pb-2">
-                  &ldquo;Menjadi lembaga bimbingan belajar terdepan dan terpercaya dalam mencetak generasi yang cerdas, berprestasi, dan berakhlak mulia.&rdquo;
-                </blockquote>
+                {/* Kotak Dalam (Inner Card) Kutipan Visi Senada dengan Item Misi */}
+                <div className="about-visi-inner-card p-4 sm:p-5">
+                  <blockquote className="text-[14px] sm:text-[15px] xl:text-[15.5px] font-bold text-[#0B1F3B] leading-relaxed">
+                    &ldquo;Menjadi lembaga bimbingan belajar terdepan dan terpercaya dalam mencetak generasi yang cerdas, berprestasi, dan berakhlak mulia.&rdquo;
+                  </blockquote>
+                </div>
               </div>
 
               {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}

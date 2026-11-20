@@ -78,8 +78,8 @@ export default function Footer() {
                   href={`mailto:${OFFICIAL_EMAIL}`}
                   className="inline-flex items-center gap-3 text-white/90 hover:text-white transition-colors"
                 >
-                  <svg className="w-5 h-5 shrink-0" fill="#FFFFFF" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+                  <svg className="w-5 h-5 shrink-0" fill="#FFFFFF" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
                   </svg>
                   <span className="whitespace-nowrap">{OFFICIAL_EMAIL}</span>
                 </a>
