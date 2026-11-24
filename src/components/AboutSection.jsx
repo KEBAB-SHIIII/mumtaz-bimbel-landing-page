@@ -6,9 +6,9 @@ export default function AboutSection() {
       {/* 1. Profil & Tentang Kami (Latar Putih Bersih) */}
       <section className="pt-16 sm:pt-20 pb-16 sm:pb-20 bg-white overflow-hidden w-full max-w-full" id="tentang-kami">
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center about-profile-grid">
+          <div className="tablet-12col-grid grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-8 lg:gap-16 items-center about-profile-grid">
             {/* Sisi Kiri: Kolase 3 Foto Siswa & Tutor */}
-            <div className="reveal-left lg:col-span-5 grid grid-cols-5 gap-3 sm:gap-4">
+            <div className="reveal-left md-col-span-5 lg:col-span-5 grid grid-cols-5 gap-3 sm:gap-4">
               <div className="col-span-3">
                 <div className="about-collage-main photo-frame aspect-[3/4] rounded-3xl about-collage-card">
                   <img
@@ -46,7 +46,7 @@ export default function AboutSection() {
             </div>
 
             {/* Sisi Kanan: Narasi Profil Bimbingan Belajar */}
-            <div className="lg:col-span-7">
+            <div className="md-col-span-7 lg:col-span-7">
               <div className="reveal-right delay-75">
                 <h2 className="section-heading-h2">
                   Belajar lebih dekat, nyaman, dan{' '}
@@ -84,11 +84,11 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          <div className="tablet-12col-grid grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-6 lg:gap-8 items-stretch">
             {/* Sisi Kiri: Visi & Banner Foto Bimbingan (Tinggi Pas Sejajar dengan Misi) */}
-            <div className="reveal-left delay-150 lg:col-span-5 flex flex-col gap-4 sm:gap-5 h-full">
+            <div className="reveal-left delay-150 md-col-span-5 lg:col-span-5 flex flex-col gap-4 sm:gap-5 h-full">
               {/* Kartu Visi: Kotak Double Warna Putih + Inner Card Soft Blue Senada dengan Misi */}
-              <div className="about-visi-card order-2 lg:order-1 p-6 sm:p-7 xl:p-8 shrink-0 flex flex-col justify-between">
+              <div className="about-visi-card md-order-1 order-2 lg:order-1 p-6 sm:p-7 xl:p-8 shrink-0 flex flex-col justify-between">
                 {/* Header Visi dengan Logo Resmi Bimbel Mumtaz */}
                 <div className="flex items-center gap-3.5 mb-5 px-1">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
@@ -116,7 +116,7 @@ export default function AboutSection() {
               </div>
 
               {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}
-              <div className="about-visi-image-card order-1 lg:order-2 group">
+              <div className="about-visi-image-card md-order-2 order-1 lg:order-2 group">
                 <img
                   src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&h=480&q=75"
                   alt="Suasana belajar bimbingan Mumtaz"
@@ -130,7 +130,7 @@ export default function AboutSection() {
             </div>
 
             {/* Sisi Kanan: Misi (Kotak Double Warna Putih Sebagai Latar) */}
-            <div className="lg:col-span-7 h-full">
+            <div className="md-col-span-7 lg:col-span-7 h-full">
               <div className="about-misi-outer-card p-6 sm:p-7 xl:p-8 h-full flex flex-col justify-between">
                 {/* Header Misi dengan Logo Resmi Bimbel Mumtaz */}
                 <div className="flex items-center gap-3.5 mb-5 px-1 reveal-right delay-100">

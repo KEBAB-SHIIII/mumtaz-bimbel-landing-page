@@ -78,9 +78,9 @@ export default function KontakSection() {
   return (
     <section className="section-blue-kontak py-20 sm:py-28 overflow-hidden w-full max-w-full" id="kontak">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
-        <div className="reveal-element contact-shell grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
+        <div className="reveal-element contact-shell tablet-12col-grid grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
           {/* Left Blue Card */}
-          <div className="lg:col-span-5 contact-left-card">
+          <div className="md-col-span-5 lg:col-span-5 contact-left-card">
             <div className="contact-illust-header" aria-hidden="true">
               <svg viewBox="0 0 380 205" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -207,7 +207,7 @@ export default function KontakSection() {
           </div>
 
           {/* Right Form Card */}
-          <div className="lg:col-span-7 contact-right-card">
+          <div className="md-col-span-7 lg:col-span-7 contact-right-card">
             <h3 className="card-heading-h3">Formulir pendaftaran</h3>
             <p className="item-body-text mt-1 mb-5">
               Isi data singkat. Kami hubungi Anda secepatnya.

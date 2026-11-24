@@ -4,8 +4,8 @@ export default function HeroSection() {
   return (
     <section className="hero-section-gradient pt-32 sm:pt-36 pb-20 sm:pb-28 overflow-hidden w-full max-w-full" id="hero">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-          <div className="lg:col-span-7 xl:col-span-7">
+        <div className="tablet-12col-grid grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-8 lg:gap-10 items-center">
+          <div className="md-col-span-7 lg:col-span-7 xl:col-span-7">
             <h1 className="hero-main-title hero-item">
               <span className="hero-title-part part-1 hero-gradient-text">
                 Privat Berkualitas,
@@ -46,7 +46,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="hero-item delay-200 lg:col-span-5 xl:col-span-5 w-full max-w-[460px] mx-auto lg:mx-0 lg:ml-auto">
+          <div className="hero-item delay-200 md-col-span-5 lg:col-span-5 xl:col-span-5 w-full max-w-[460px] mx-auto md-mx-0 md-ml-auto lg:mx-0 lg:ml-auto">
             <div className="hero-visual-stage">
               <svg
                 viewBox="0 0 440 400"

@@ -107,13 +107,13 @@ export default function Navbar() {
       className="navbar-floating-header fixed top-3 sm:top-3.5 left-1/2 -translate-x-1/2 z-50"
     >
       <div
-        className={`navbar-floating-inner bg-white rounded-2xl flex items-center justify-between gap-2.5 sm:gap-3 lg:gap-4 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.06),0_6px_12px_-4px_rgba(0,0,0,0.03)] border-0 outline-none transition-all duration-300 ${
+        className={`navbar-floating-inner bg-white rounded-2xl flex items-center justify-between gap-2 sm:gap-3 lg:gap-4 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.06),0_6px_12px_-4px_rgba(0,0,0,0.03)] border-0 outline-none transition-all duration-300 ${
           isScrolled ? 'navbar-scrolled' : ''
         }`}
       >
         {/* Brand Logo & Title */}
         <a
-          className="flex items-center gap-2 sm:gap-2.5 shrink-0 group"
+          className="flex items-center gap-2 sm:gap-2.5 min-w-0 shrink group"
           href="#"
           aria-label="Bimbel Mumtaz Sampit Beranda"
           onClick={() => lockNavbarOnNavigate('#')}
@@ -131,10 +131,10 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col justify-center min-w-0">
-            <span className="navbar-brand-title font-extrabold text-[#0B1F3B] tracking-tight leading-tight group-hover:text-[#2563EB] transition-colors whitespace-nowrap">
+            <span className="navbar-brand-title font-extrabold text-[#0B1F3B] tracking-tight leading-tight group-hover:text-[#2563EB] transition-colors whitespace-nowrap truncate">
               Bimbel Mumtaz Sampit
             </span>
-            <span className="navbar-brand-subtitle font-semibold text-[#2563EB] tracking-wide leading-none mt-0.5 whitespace-nowrap" style={{ color: '#2563EB' }}>
+            <span className="navbar-brand-subtitle font-semibold text-[#2563EB] tracking-wide leading-none mt-0.5 whitespace-nowrap truncate" style={{ color: '#2563EB' }}>
               Les Privat ke Rumah
             </span>
           </div>
@@ -157,16 +157,16 @@ export default function Navbar() {
         </nav>
 
         {/* Action Button & Mobile Toggle */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <a
             className="nav-portal-btn"
             href="#portal-orang-tua"
           >
-            <svg width="16" height="16" className="w-4 h-4 shrink-0" style={{ width: '16px', height: '16px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg width="15" height="15" className="w-4 h-4 shrink-0" style={{ width: '15px', height: '15px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
             </svg>
             <span>Portal<span className="nav-portal-text-extra"> Orang Tua</span></span>
-            <span className="text-[13.5px] sm:text-[14.5px] font-bold ml-0.5 leading-none">&rsaquo;</span>
+            <span className="text-[13px] sm:text-[14.5px] font-bold ml-0.5 leading-none">&rsaquo;</span>
           </a>
           <button
             type="button"
@@ -176,7 +176,7 @@ export default function Navbar() {
               e.stopPropagation();
               setMobileOpen((prev) => !prev);
             }}
-            className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#F0F7FF] hover:bg-[#DBEAFE] active:bg-[#BFDBFE] flex items-center justify-center transition-colors cursor-pointer text-[#0B1F3B] shrink-0"
+            className="navbar-mobile-toggle lg:hidden rounded-xl bg-[#F0F7FF] hover:bg-[#DBEAFE] active:bg-[#BFDBFE] flex items-center justify-center transition-colors cursor-pointer text-[#0B1F3B] shrink-0"
           >
             {mobileOpen ? (
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24">

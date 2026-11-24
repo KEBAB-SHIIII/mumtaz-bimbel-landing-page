@@ -4,8 +4,8 @@ export default function KeunggulanSection() {
   return (
     <section className="py-20 sm:py-28 bg-white overflow-hidden w-full max-w-full" id="keunggulan">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          <div className="reveal-left lg:col-span-5 flex">
+        <div className="tablet-12col-grid grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-8 lg:gap-14 items-stretch">
+          <div className="reveal-left md-col-span-5 lg:col-span-5 flex">
             <div className="photo-frame keunggulan-photo-frame rounded-[32px] w-full">
               <img
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=640&h=800&q=75"
@@ -18,7 +18,7 @@ export default function KeunggulanSection() {
             </div>
           </div>
 
-          <div className="reveal-right lg:col-span-7 flex flex-col justify-center">
+          <div className="reveal-right md-col-span-7 lg:col-span-7 flex flex-col justify-center">
             <h2 className="section-heading-h2">
               Kenapa memilih Bimbel Mumtaz
             </h2>

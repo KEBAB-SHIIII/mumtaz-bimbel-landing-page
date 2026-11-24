@@ -13,9 +13,9 @@ export default function ProgramSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+        <div className="program-top-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
           {/* Card 1: Privat TK */}
-          <div className="reveal-left delay-75 lg:col-span-2">
+          <div className="reveal-left delay-75 md-col-span-2 lg:col-span-2">
             <article className="program-card">
               <div className="program-card-body">
                 <span className="program-pill">USIA DINI</span>
@@ -74,7 +74,7 @@ export default function ProgramSection() {
           </div>
 
           {/* Card 2: Privat SD */}
-          <div className="reveal-element delay-150 lg:col-span-2">
+          <div className="reveal-element delay-150 md-col-span-2 lg:col-span-2">
             <article className="program-card">
               <div className="program-card-body">
                 <span className="program-pill">KELAS 1 SAMPAI 6</span>
@@ -118,7 +118,7 @@ export default function ProgramSection() {
           </div>
 
           {/* Card 3: Privat SMP */}
-          <div className="reveal-right delay-200 lg:col-span-2">
+          <div className="reveal-right delay-200 md-col-span-2 lg:col-span-2">
             <article className="program-card">
               <div className="program-card-body">
                 <span className="program-pill">KELAS 7 SAMPAI 9</span>
@@ -157,7 +157,7 @@ export default function ProgramSection() {
           </div>
 
           {/* Card 4: Privat SMA */}
-          <div className="reveal-left delay-150 lg:col-span-3">
+          <div className="reveal-left delay-150 md-col-span-3 lg:col-span-3">
             <article className="program-card">
               <div className="program-card-body">
                 <span className="program-pill">KELAS 10 SAMPAI 12</span>
@@ -210,7 +210,7 @@ export default function ProgramSection() {
           </div>
 
           {/* Card 5: Privat Mengaji */}
-          <div className="reveal-right delay-250 sm:col-span-2 lg:col-span-3">
+          <div className="reveal-right delay-250 sm:col-span-2 md-col-span-3 lg:col-span-3">
             <article className="program-card">
               <div className="program-card-body">
                 <span className="program-pill">SEMUA USIA ANAK</span>
@@ -265,7 +265,7 @@ export default function ProgramSection() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div className="program-mini-grid grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {/* Card 1: Pelajaran Umum (Blue Theme) */}
             <div className="reveal-pop delay-75">
               <article className="mini-program-card mini-card-blue">
