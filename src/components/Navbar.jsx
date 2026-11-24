@@ -111,7 +111,7 @@ export default function Navbar() {
             <span className="text-[13.5px] xs:text-[14.5px] sm:text-lg lg:text-[20px] xl:text-[21px] font-extrabold text-[#0B1F3B] tracking-tight leading-tight group-hover:text-[#2563EB] transition-colors whitespace-nowrap">
               Bimbel Mumtaz Sampit
             </span>
-            <span className="text-[10px] sm:text-[11px] lg:text-[11.5px] font-semibold text-[#1D4ED8] tracking-wide leading-none mt-0.5 sm:mt-1 whitespace-nowrap">
+            <span className="text-[10px] sm:text-[11px] lg:text-[11.5px] font-semibold text-[#2563EB] tracking-wide leading-none mt-0.5 sm:mt-1 whitespace-nowrap" style={{ color: '#2563EB' }}>
               Les Privat ke Rumah
             </span>
           </div>

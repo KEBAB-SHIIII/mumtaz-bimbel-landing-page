@@ -196,20 +196,6 @@ export default function KontakSection() {
                 </li>
               </ul>
 
-              <div className="mt-6 relative z-10">
-                <a
-                  href={`https://wa.me/${OFFICIAL_WA_NUMBER}?text=Halo%20Bimbel%20Mumtaz%20Sampit,%20saya%20ingin%20konsultasi%20les%20privat%20ke%20rumah.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#1D4ED8] hover:bg-[#EFF6FF] font-bold text-xs sm:text-sm shadow-lg shadow-[#0B1F3B]/15 transition-all hover:-translate-y-0.5"
-                >
-                  <svg width="18" height="18" className="w-4 h-4 shrink-0" style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z" />
-                  </svg>
-                  <span>Chat via WhatsApp</span>
-                </a>
-              </div>
-
               <svg className="contact-corner-leaves" viewBox="0 0 120 110" fill="none" aria-hidden="true">
                 <path d="M68 110C64 84 74 56 92 34" stroke="#60A5FA" strokeWidth="2.5" strokeLinecap="round" opacity="0.55" />
                 <path d="M74 74C56 68 44 54 46 42C60 44 72 56 74 74Z" fill="#60A5FA" opacity="0.45" />

@@ -24,9 +24,9 @@ const GALLERY_PHOTOS = [
     alt: 'Latihan soal terarah',
     caption: 'Latihan soal',
     slotClass: 'gallery-slot-land-bottom',
-    objectPosition: 'center 10%',
-    width: 1200,
-    height: 900,
+    objectPosition: 'center 18%',
+    width: 900,
+    height: 1200,
   },
   {
     src: './assets/images/foto_mengaji.jpeg',

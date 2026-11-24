@@ -12,8 +12,10 @@ export default function AboutSection() {
               <div className="col-span-3">
                 <div className="about-collage-main photo-frame aspect-[3/4] rounded-3xl about-collage-card">
                   <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=75"
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&h=800&q=75"
                     alt="Siswa belajar bersama tutor privat di rumah"
+                    width="600"
+                    height="800"
                     decoding="async"
                     loading="lazy"
                   />
@@ -22,16 +24,20 @@ export default function AboutSection() {
               <div className="about-collage-stack col-span-2 flex flex-col gap-3 sm:gap-4 pt-8">
                 <div className="reveal-left delay-150 photo-frame aspect-square rounded-3xl about-collage-card">
                   <img
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=75"
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&h=400&q=75"
                     alt="Siswa belajar dengan tutor privat"
+                    width="400"
+                    height="400"
                     decoding="async"
                     loading="lazy"
                   />
                 </div>
                 <div className="reveal-left delay-300 photo-frame aspect-square rounded-3xl about-collage-card">
                   <img
-                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=75"
+                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&h=400&q=75"
                     alt="Siswa mengerjakan latihan soal bimbingan belajar"
+                    width="400"
+                    height="400"
                     decoding="async"
                     loading="lazy"
                   />
@@ -109,8 +115,10 @@ export default function AboutSection() {
               {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}
               <div className="about-visi-image-card order-1 lg:order-2 group">
                 <img
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=75"
+                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&h=480&q=75"
                   alt="Suasana belajar bimbingan Mumtaz"
+                  width="700"
+                  height="480"
                   decoding="async"
                   className="transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"

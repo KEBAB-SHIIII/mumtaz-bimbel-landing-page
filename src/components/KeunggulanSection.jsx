@@ -8,8 +8,10 @@ export default function KeunggulanSection() {
           <div className="reveal-left lg:col-span-5">
             <div className="photo-frame aspect-[4/5] rounded-[32px]">
               <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=75"
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=640&h=800&q=75"
                 alt="Siswa berdiskusi dan belajar bersama"
+                width="640"
+                height="800"
                 decoding="async"
                 loading="lazy"
               />
