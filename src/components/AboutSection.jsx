@@ -48,15 +48,18 @@ export default function AboutSection() {
             {/* Sisi Kanan: Narasi Profil Bimbingan Belajar */}
             <div className="lg:col-span-7">
               <div className="reveal-right delay-75">
-                <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold tracking-tight leading-[1.18] text-[#0B1F3B]">
+                <h2 className="section-heading-h2">
                   Belajar lebih dekat, nyaman, dan{' '}
                   <span className="text-[#2563EB]">benar-benar paham</span>
                 </h2>
               </div>
 
               <div className="reveal-right delay-150">
-                <p className="text-[#475569] mt-6 text-base sm:text-lg leading-relaxed">
-                  Mumtaz Bimbel Sampit adalah lembaga bimbingan belajar terpercaya di Sampit yang berkomitmen menghadirkan pendidikan berkualitas. Kami mendampingi siswa dari tingkat PAUD, TK hingga SMA melalui sistem privat <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">1-on-1 (guru datang langsung ke rumah)</span> untuk meningkatkan prestasi akademik sekaligus membimbing kegiatan mengaji dengan pendekatan yang ramah dan terarah.
+                <p
+                  className="section-subtitle-p mt-5"
+                  style={{ textAlign: 'justify' }}
+                >
+                  Mumtaz Bimbel Sampit adalah lembaga bimbingan belajar terpercaya di Sampit yang berkomitmen menghadirkan pendidikan berkualitas. Kami mendampingi siswa dari tingkat PAUD, TK hingga SMA melalui sistem privat <span className="font-semibold text-[#0B1F3B]">1-on-1 (guru datang langsung ke rumah)</span> untuk meningkatkan prestasi akademik sekaligus membimbing kegiatan mengaji dengan pendekatan yang ramah dan terarah.
                 </p>
               </div>
             </div>
@@ -73,10 +76,10 @@ export default function AboutSection() {
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
           {/* Header Visi & Misi */}
           <div className="reveal-element delay-75 mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-[2.3rem] font-extrabold text-[#0B1F3B] tracking-tight">
+            <h2 className="section-heading-h2">
               Visi &amp; Misi <span className="text-[#2563EB]">Bimbel Mumtaz</span>
             </h2>
-            <p className="text-sm sm:text-base text-[#475569] mt-2 max-w-2xl leading-relaxed">
+            <p className="section-subtitle-p mt-3 max-w-2xl">
               Komitmen dan arah pendidikan kami dalam mendampingi tumbuh kembang akademik anak di Sampit.
             </p>
           </div>
@@ -100,13 +103,13 @@ export default function AboutSection() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Visi</h3>
+                    <h3 className="card-heading-h3">Visi</h3>
                   </div>
                 </div>
 
                 {/* Kotak Dalam (Inner Card) Kutipan Visi Senada dengan Item Misi */}
                 <div className="about-visi-inner-card p-4 sm:p-5">
-                  <blockquote className="text-[13.5px] sm:text-[14.5px] xl:text-[15px] font-normal text-[#475569] leading-relaxed">
+                  <blockquote className="item-body-text font-normal">
                     &ldquo;Menjadi lembaga bimbingan belajar terdepan dan terpercaya dalam mencetak generasi yang cerdas, berprestasi, dan berakhlak mulia.&rdquo;
                   </blockquote>
                 </div>
@@ -143,7 +146,7 @@ export default function AboutSection() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Misi</h3>
+                    <h3 className="card-heading-h3">Misi</h3>
                   </div>
                 </div>
 
@@ -156,8 +159,8 @@ export default function AboutSection() {
                         01
                       </div>
                       <div>
-                        <h4 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pembelajaran Adaptif &amp; Personal</h4>
-                        <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
+                        <h4 className="item-heading-title">Pembelajaran Adaptif &amp; Personal</h4>
+                        <p className="item-body-text mt-1">
                           Menyediakan metode pembelajaran privat yang adaptif, menyenangkan, dan berfokus pada kebutuhan individu siswa <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">(1-on-1)</span>.
                         </p>
                       </div>
@@ -171,8 +174,8 @@ export default function AboutSection() {
                         02
                       </div>
                       <div>
-                        <h4 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pengajar Profesional &amp; Sabar</h4>
-                        <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
+                        <h4 className="item-heading-title">Pengajar Profesional &amp; Sabar</h4>
+                        <p className="item-body-text mt-1">
                           Menghadirkan tenaga pengajar yang profesional, sabar, dan berpengalaman menghadapi berbagai karakter anak.
                         </p>
                       </div>
@@ -186,8 +189,8 @@ export default function AboutSection() {
                         03
                       </div>
                       <div>
-                        <h4 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pendampingan Akademik &amp; Mengaji</h4>
-                        <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
+                        <h4 className="item-heading-title">Pendampingan Akademik &amp; Mengaji</h4>
+                        <p className="item-body-text mt-1">
                           Mengintegrasikan pendampingan akademik secara menyeluruh, mulai dari pelajaran sekolah umum hingga bimbingan mengaji.
                         </p>
                       </div>

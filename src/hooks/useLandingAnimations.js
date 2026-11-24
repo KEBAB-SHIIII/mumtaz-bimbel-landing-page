@@ -12,9 +12,12 @@ export function useLandingAnimations() {
     if (prefersReducedMotion) {
       heroItems.forEach((el) => el.classList.add('hero-shown'));
     } else {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => heroItems.forEach((el) => el.classList.add('hero-shown')));
-      });
+      heroItems.forEach((el) => el.classList.remove('hero-shown'));
+      setTimeout(() => {
+        requestAnimationFrame(() => {
+          heroItems.forEach((el) => el.classList.add('hero-shown'));
+        });
+      }, 60);
     }
 
     const heroSection = document.getElementById('hero');

@@ -55,10 +55,10 @@ export default function GaleriSection() {
     <section className="section-blue-galeri py-20 sm:py-28 overflow-hidden w-full max-w-full" id="galeri">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="reveal-element max-w-xl mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15]">
+          <h2 className="section-heading-h2">
             Galeri kegiatan belajar
           </h2>
-          <p className="text-[#475569] mt-4">Suasana bimbingan belajar Mumtaz.</p>
+          <p className="section-subtitle-p mt-3.5">Suasana bimbingan belajar Mumtaz.</p>
         </div>
 
         {/* Satu kali scroll pada kontainer galeri langsung memicu animasi berurutan untuk ke-5 foto */}

@@ -10,8 +10,11 @@ export default function HeroSection() {
               <span className="hero-title-part part-1 hero-gradient-text">
                 Privat Berkualitas,
               </span>{' '}
-              <span className="hero-title-part part-2 relative inline-block hero-gradient-text">
-                Dekat &amp; Terpercaya!
+              <span className="hero-title-part part-2 hero-gradient-text">
+                Dekat &amp;{' '}
+              </span>
+              <span className="hero-title-part part-3 relative inline-block hero-gradient-text">
+                Terpercaya!
                 <svg
                   className="hero-underline-svg"
                   viewBox="0 0 180 12"
@@ -29,15 +32,15 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <p className="hero-item delay-150 text-[#475569] text-base sm:text-lg mt-6 max-w-2xl leading-relaxed">
+            <p className="hero-subtitle-text hero-item delay-150 text-[#475569] mt-6 leading-relaxed">
               Layanan bimbingan belajar privat dan online terpercaya di Sampit. Dengan sistem guru datang langsung ke rumah <span className="whitespace-nowrap">(1-on-1)</span>, kami mendampingi siswa dari PAUD sampai SMA secara personal, ramah, dan terarah, mencakup peningkatan prestasi akademik hingga mengaji dengan metode yang menyenangkan.
             </p>
 
             <div className="hero-item delay-250 flex flex-wrap items-center gap-4 mt-9">
-              <a className="btn-sky" href="#kontak">
+              <a className="btn-sky hero-cta-btn" href="#kontak">
                 Daftar Sekarang
               </a>
-              <a className="btn-outline-modern" href="#program">
+              <a className="btn-outline-modern hero-cta-btn" href="#program">
                 Lihat Program
               </a>
             </div>

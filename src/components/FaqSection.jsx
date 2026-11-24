@@ -50,10 +50,10 @@ export default function FaqSection() {
     <section className="py-20 sm:py-28 bg-white overflow-hidden w-full max-w-full" id="faq">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="reveal-element max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15] text-[#0B1F3B]">
+          <h2 className="section-heading-h2">
             Pertanyaan yang sering ditanyakan
           </h2>
-          <p className="text-[#475569] mt-3.5 text-base sm:text-lg leading-relaxed">
+          <p className="section-subtitle-p mt-3.5">
             Jawaban cepat seputar layanan Bimbel Mumtaz.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function FaqSection() {
                   </button>
                   <div className="faq-collapse">
                     <div className="faq-answer-inner">
-                      <p className="text-sm sm:text-[0.95rem] text-[#475569] leading-relaxed">{item.a}</p>
+                      <p className="item-body-text">{item.a}</p>
                     </div>
                   </div>
                 </article>

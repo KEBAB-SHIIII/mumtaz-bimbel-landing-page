@@ -160,10 +160,10 @@ export default function KontakSection() {
             </div>
 
             <div className="contact-left-body">
-              <h2 className="text-2xl sm:text-[26px] font-extrabold tracking-tight leading-[1.18] text-white">
+              <h2 className="card-heading-h3 text-white" style={{ color: '#FFFFFF' }}>
                 Undang tutor Mumtaz ke rumah Anda
               </h2>
-              <p className="text-white/90 text-xs sm:text-sm mt-2.5 leading-relaxed">
+              <p className="text-white/90 text-sm mt-2.5 leading-relaxed">
                 Ceritakan kebutuhan belajar anak. Kami bantu atur jadwal dan pilihkan tutor yang cocok.
               </p>
 
@@ -208,8 +208,8 @@ export default function KontakSection() {
 
           {/* Right Form Card */}
           <div className="lg:col-span-7 contact-right-card">
-            <h3 className="font-extrabold text-xl sm:text-2xl text-[#0B1F3B] tracking-tight">Formulir pendaftaran</h3>
-            <p className="text-[#475569] text-xs sm:text-sm mt-1 mb-5">
+            <h3 className="card-heading-h3">Formulir pendaftaran</h3>
+            <p className="item-body-text mt-1 mb-5">
               Isi data singkat. Kami hubungi Anda secepatnya.
             </p>
 

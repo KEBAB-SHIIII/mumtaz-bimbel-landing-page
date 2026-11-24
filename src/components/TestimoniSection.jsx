@@ -186,10 +186,10 @@ function ActiveTestimoniCard({ item }) {
 function ActiveTestimoniAuthor({ item }) {
   return (
     <div className="text-center">
-      <h3 className="font-semibold text-sm sm:text-[14.5px] text-[#0B1F3B] tracking-tight">
+      <h3 className="testi-active-author-name font-bold text-[#0B1F3B] tracking-tight">
         {item.name}
       </h3>
-      <p className="text-xs text-[#1D4ED8] font-medium mt-0.5">
+      <p className="testi-active-author-level font-semibold mt-1" style={{ color: '#2563EB' }}>
         {item.level}
       </p>
     </div>
@@ -283,7 +283,7 @@ export default function TestimoniSection() {
       <div className="max-w-[1140px] mx-auto px-5 sm:px-8">
         {/* Header Section dengan Animasi Muncul Saat Scroll & Garis Kuas Terlukis */}
         <div className="text-center testi-header-spacing reveal-element delay-75">
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-[#0B1F3B] tracking-tight inline-block relative leading-[1.25] pb-3 sm:pb-4">
+          <h2 className="section-heading-h2 inline-block relative pb-3 sm:pb-4">
             Kata Mereka Tentang{' '}
             <span
               className="relative inline-block ml-1.5 sm:ml-2 text-[#2563EB]"
@@ -310,7 +310,7 @@ export default function TestimoniSection() {
               </svg>
             </span>
           </h2>
-          <p className="text-[#475569] mt-4 sm:mt-5 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="section-subtitle-p mt-4 sm:mt-5 max-w-xl mx-auto">
             Pengalaman nyata para wali murid dan siswa selama mengikuti bimbingan belajar Mumtaz.
           </p>
         </div>

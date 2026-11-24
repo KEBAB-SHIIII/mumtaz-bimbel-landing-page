@@ -5,10 +5,10 @@ export default function ProgramSection() {
     <section className="section-blue-program py-20 sm:py-28 overflow-hidden w-full max-w-full" id="program">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div className="reveal-element max-w-2xl mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15] text-[#0B1F3B]">
+          <h2 className="section-heading-h2">
             Les Privat ke Rumah <span className="text-[#2563EB] whitespace-nowrap">(1 Guru 1 Murid)</span>
           </h2>
-          <p className="text-[#475569] mt-4 text-base sm:text-lg leading-relaxed">
+          <p className="section-subtitle-p mt-3.5">
             Layanan eksklusif untuk tingkat PAUD, TK, SD, SMP, hingga SMA dengan guru datang langsung ke rumah siswa.
           </p>
         </div>
@@ -260,7 +260,7 @@ export default function ProgramSection() {
         {/* Materi Pembelajaran */}
         <div className="program-materi-section">
           <div className="reveal-element program-materi-header">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3B] tracking-tight">
+            <h3 className="section-subheading-h3">
               Materi Pembelajaran
             </h3>
           </div>

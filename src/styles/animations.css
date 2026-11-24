@@ -90,24 +90,29 @@
 }
 
 .hero-gradient-text {
-  background: linear-gradient(90deg, #1D4ED8 0%, #2563EB 45%, #0284C7 100%);
+  background: linear-gradient(90deg, #1D4ED8 0%, #2563EB 35%, #38BDF8 68%, #2563EB 100%);
+  background-size: 220% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: textGradientShift 4.5s ease-in-out infinite;
 }
 
 .hero-title-part {
   display: inline-block;
   opacity: 1;
   transform: none;
+  filter: blur(0);
   transition:
     opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .js-ready .hero-item:not(.hero-shown) .hero-title-part {
   opacity: 0;
   transform: translateY(22px);
+  filter: blur(5px);
   transition-duration: 0.2s;
   transition-delay: 0s !important;
 }
@@ -115,6 +120,7 @@
 .js-ready .hero-item.from-top:not(.hero-shown) .hero-title-part {
   opacity: 0;
   transform: translateY(-22px);
+  filter: blur(5px);
 }
 
 .hero-item.hero-shown .hero-title-part.part-1 {
@@ -129,18 +135,14 @@
   transition-delay: 0.28s;
 }
 
-.hero-underline-svg {
-  transform-origin: left center;
-  transform: scaleX(0);
-  opacity: 0;
-  transition:
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.38s,
-    opacity 0.4s ease 0.38s;
+.hero-underline-svg path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.42s;
 }
 
-.hero-item.hero-shown .hero-underline-svg {
-  transform: scaleX(1);
-  opacity: 1;
+.hero-item.hero-shown .hero-underline-svg path {
+  stroke-dashoffset: 0;
 }
 
 /* Subtle Hover Micro-Transitions */

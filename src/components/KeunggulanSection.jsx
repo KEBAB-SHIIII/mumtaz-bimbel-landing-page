@@ -4,9 +4,9 @@ export default function KeunggulanSection() {
   return (
     <section className="py-20 sm:py-28 bg-white overflow-hidden w-full max-w-full" id="keunggulan">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="reveal-left lg:col-span-5">
-            <div className="photo-frame aspect-[4/5] rounded-[32px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
+          <div className="reveal-left lg:col-span-5 flex">
+            <div className="photo-frame keunggulan-photo-frame rounded-[32px] w-full">
               <img
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=640&h=800&q=75"
                 alt="Siswa berdiskusi dan belajar bersama"
@@ -18,8 +18,8 @@ export default function KeunggulanSection() {
             </div>
           </div>
 
-          <div className="reveal-right lg:col-span-7">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-[1.15]">
+          <div className="reveal-right lg:col-span-7 flex flex-col justify-center">
+            <h2 className="section-heading-h2">
               Kenapa memilih Bimbel Mumtaz
             </h2>
 
@@ -27,8 +27,8 @@ export default function KeunggulanSection() {
               <div className="benefit-row reveal-element delay-75 flex gap-4">
                 <span className="benefit-icon">1</span>
                 <div>
-                  <h3 className="font-bold">Guru Datang ke Rumah &amp; Pendampingan Personal (1-on-1)</h3>
-                  <p className="text-sm text-[#475569] mt-1 leading-relaxed">
+                  <h3 className="item-heading-title">Guru Datang ke Rumah &amp; Pendampingan Personal (1-on-1)</h3>
+                  <p className="item-body-text mt-1">
                     Solusi praktis bagi orang tua yang sibuk tanpa perlu mengantar anak les, dengan sesi privat eksklusif satu guru satu murid agar belajar lebih fokus, interaktif, dan mudah dipahami.
                   </p>
                 </div>
@@ -36,8 +36,8 @@ export default function KeunggulanSection() {
               <div className="benefit-row reveal-element delay-150 flex gap-4">
                 <span className="benefit-icon">2</span>
                 <div>
-                  <h3 className="font-bold">Pengajar Berpengalaman dan Sabar</h3>
-                  <p className="text-sm text-[#475569] mt-1 leading-relaxed">
+                  <h3 className="item-heading-title">Pengajar Berpengalaman dan Sabar</h3>
+                  <p className="item-body-text mt-1">
                     Didukung oleh tenaga pendidik yang profesional, ramah, dan telaten menghadapi berbagai karakter anak.
                   </p>
                 </div>
@@ -45,8 +45,8 @@ export default function KeunggulanSection() {
               <div className="benefit-row reveal-element delay-200 flex gap-4">
                 <span className="benefit-icon">3</span>
                 <div>
-                  <h3 className="font-bold">Cakupan Luas dan Lengkap</h3>
-                  <p className="text-sm text-[#475569] mt-1 leading-relaxed">
+                  <h3 className="item-heading-title">Cakupan Luas dan Lengkap</h3>
+                  <p className="item-body-text mt-1">
                     Melayani jenjang pendidikan dari PAUD, TK sampai SMA, mencakup pelajaran sekolah umum hingga bimbingan mengaji.
                   </p>
                 </div>
@@ -54,8 +54,8 @@ export default function KeunggulanSection() {
               <div className="benefit-row reveal-element delay-250 flex gap-4">
                 <span className="benefit-icon">4</span>
                 <div>
-                  <h3 className="font-bold">Jadwal Fleksibel</h3>
-                  <p className="text-sm text-[#475569] mt-1 leading-relaxed">
+                  <h3 className="item-heading-title">Jadwal Fleksibel</h3>
+                  <p className="item-body-text mt-1">
                     Waktu belajar dapat disesuaikan dengan kenyamanan dan kesibukan siswa.
                   </p>
                 </div>
