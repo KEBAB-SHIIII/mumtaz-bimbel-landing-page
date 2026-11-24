@@ -9,7 +9,7 @@ export default function ProgramSection() {
             Les Privat ke Rumah <span className="text-[#2563EB] whitespace-nowrap">(1 Guru 1 Murid)</span>
           </h2>
           <p className="text-[#475569] mt-4 text-base sm:text-lg leading-relaxed">
-            Layanan eksklusif untuk tingkat TK, SD, SMP, hingga SMA dengan guru datang langsung ke rumah siswa.
+            Layanan eksklusif untuk tingkat PAUD, TK, SD, SMP, hingga SMA dengan guru datang langsung ke rumah siswa.
           </p>
         </div>
 
@@ -258,8 +258,8 @@ export default function ProgramSection() {
         </div>
 
         {/* Materi Pembelajaran */}
-        <div className="mt-14 sm:mt-16">
-          <div className="reveal-element mb-6">
+        <div className="program-materi-section">
+          <div className="reveal-element program-materi-header">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3B] tracking-tight">
               Materi Pembelajaran
             </h3>

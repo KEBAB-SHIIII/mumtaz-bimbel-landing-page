@@ -23,6 +23,9 @@ export default function Footer() {
                 <img
                   src="assets/images/logo-mumtaz.png"
                   alt="Logo Bimbel Mumtaz"
+                  width="48"
+                  height="48"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-full"
                   loading="lazy"
                 />

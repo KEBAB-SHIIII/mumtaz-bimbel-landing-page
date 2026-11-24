@@ -186,10 +186,10 @@ function ActiveTestimoniCard({ item }) {
 function ActiveTestimoniAuthor({ item }) {
   return (
     <div className="text-center">
-      <h4 className="font-semibold text-sm sm:text-[14.5px] text-[#0B1F3B] tracking-tight">
+      <h3 className="font-semibold text-sm sm:text-[14.5px] text-[#0B1F3B] tracking-tight">
         {item.name}
-      </h4>
-      <p className="text-xs text-[#2563EB] font-medium mt-0.5">
+      </h3>
+      <p className="text-xs text-[#1D4ED8] font-medium mt-0.5">
         {item.level}
       </p>
     </div>

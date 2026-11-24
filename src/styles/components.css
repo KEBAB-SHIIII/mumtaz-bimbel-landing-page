@@ -23,17 +23,17 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 60%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-  transform: skewX(-20deg);
-  transition: left 0.55s ease;
+  transform: translate3d(-180%, 0, 0) skewX(-20deg);
+  transition: transform 0.55s ease;
   pointer-events: none;
 }
 
 .btn-sky:hover::after {
-  left: 140%;
+  transform: translate3d(260%, 0, 0) skewX(-20deg);
 }
 
 .btn-sky:hover {
@@ -305,6 +305,24 @@
 }
 
 /* Materi Pembelajaran Cards (Mini 4-in-a-row) */
+.program-materi-section {
+  margin-top: 2.5rem;
+}
+
+.program-materi-header {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .program-materi-section {
+    margin-top: 3.5rem;
+  }
+
+  .program-materi-header {
+    margin-bottom: 1.75rem;
+  }
+}
+
 .mini-program-card {
   position: relative;
   display: flex;
@@ -1212,7 +1230,7 @@
 .option-tag {
   font-size: 0.68rem;
   font-weight: 600;
-  color: #2563EB;
+  color: #1D4ED8;
   background: #EFF6FF;
   border: 1px solid #DBEAFE;
   padding: 0.18rem 0.55rem;
@@ -1328,18 +1346,27 @@
 }
 
 .faq-collapse {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  transition: opacity 0.25s ease;
+}
+
+.faq-collapse > .faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 1px solid transparent;
 }
 
 .faq-item.active .faq-collapse {
-  max-height: 320px;
+  grid-template-rows: 1fr;
   opacity: 1;
 }
 
-.faq-answer-inner {
+.faq-item.active .faq-collapse > .faq-answer-inner {
   border-top: 1px solid #EBF3FF;
   padding-top: 0.85rem;
   padding-bottom: 1.25rem;
@@ -1440,8 +1467,8 @@
 
 @media (min-width: 768px) {
   .testi-3col-grid {
-    grid-template-columns: 1fr 1.35fr 1fr;
-    gap: 1.25rem;
+    grid-template-columns: 0.78fr 1.48fr 0.78fr;
+    gap: 3.5rem;
   }
 
   .testi-side-col {
@@ -1451,6 +1478,13 @@
   .testi-center-col {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testi-3col-grid {
+    grid-template-columns: 0.82fr 1.44fr 0.82fr;
+    gap: 4.25rem;
   }
 }
 
@@ -1479,10 +1513,10 @@
   position: relative;
   background-color: #F8FAFC;
   border: 1px solid #E2E8F0;
-  color: #64748B;
-  opacity: 0.5;
-  border-radius: 1.5rem;
-  padding: 1.25rem 1.25rem;
+  color: #475569;
+  opacity: 0.78;
+  border-radius: 1.25rem;
+  padding: 1rem 1.05rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1492,24 +1526,24 @@
 }
 
 .testi-card-faded:hover {
-  opacity: 0.85;
+  opacity: 0.95;
   border-color: #CBD5E1;
   background-color: #F1F5F9;
   transform: translateY(-2px);
 }
 
 .testi-card-faded-quote {
-  color: #64748B;
-  font-size: 0.8125rem;
-  line-height: 1.6;
+  color: #334155;
+  font-size: 0.76rem;
+  line-height: 1.55;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .testi-card-faded-name {
-  color: #64748B;
+  color: #334155;
   font-size: 0.75rem;
   font-weight: 600;
   white-space: nowrap;
@@ -1518,7 +1552,7 @@
 }
 
 .testi-card-faded-level {
-  color: #94A3B8;
+  color: #475569;
   font-size: 0.6875rem;
   font-weight: 500;
   margin-top: 0.125rem;
@@ -1686,16 +1720,20 @@
   }
 }
 
-/* Brush stroke draw-in on scroll reveal */
+/* Brush stroke draw-in on scroll reveal (GPU composited via transform) */
 .testi-brush-path {
-  stroke-dasharray: 220;
-  stroke-dashoffset: 220;
-  transition: stroke-dashoffset 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0;
+  transition:
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
+    opacity 0.4s ease 0.3s;
 }
 
 .is-revealed .testi-brush-path,
 [data-revealed="true"] .testi-brush-path {
-  stroke-dashoffset: 0;
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .testi-nav-arrow {
@@ -1757,8 +1795,8 @@
 
 @media (min-width: 640px) {
   .testi-arrow-side {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
 
   .testi-arrow-left {
@@ -1770,13 +1808,33 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+  .testi-arrow-side {
+    width: 38px;
+    height: 38px;
+  }
+
   .testi-arrow-left {
-    left: -22px;
+    left: -47px;
   }
 
   .testi-arrow-right {
-    right: -22px;
+    right: -47px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testi-arrow-side {
+    width: 42px;
+    height: 42px;
+  }
+
+  .testi-arrow-left {
+    left: -55px;
+  }
+
+  .testi-arrow-right {
+    right: -55px;
   }
 }
 

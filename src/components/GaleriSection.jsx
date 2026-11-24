@@ -7,8 +7,8 @@ const GALLERY_PHOTOS = [
     caption: 'Pendampingan telaten',
     slotClass: 'gallery-slot-hero',
     objectPosition: 'center 25%',
-    width: 600,
-    height: 750,
+    width: 846,
+    height: 1200,
   },
   {
     src: './assets/images/belajarfokus.jpg',
@@ -16,8 +16,8 @@ const GALLERY_PHOTOS = [
     caption: 'Diskusi soal',
     slotClass: 'gallery-slot-land-top',
     objectPosition: 'center 20%',
-    width: 600,
-    height: 400,
+    width: 1200,
+    height: 900,
   },
   {
     src: './assets/images/mengerjakansoal.jpeg',
@@ -25,8 +25,8 @@ const GALLERY_PHOTOS = [
     caption: 'Latihan soal',
     slotClass: 'gallery-slot-land-bottom',
     objectPosition: 'center 10%',
-    width: 600,
-    height: 400,
+    width: 1200,
+    height: 900,
   },
   {
     src: './assets/images/foto_mengaji.jpeg',
@@ -34,8 +34,8 @@ const GALLERY_PHOTOS = [
     caption: 'Bimbingan mengaji',
     slotClass: 'gallery-slot-mengaji',
     objectPosition: 'center 35%',
-    width: 600,
-    height: 750,
+    width: 675,
+    height: 1200,
   },
   {
     src: './assets/images/belajar_fokus.jpg',
@@ -43,8 +43,8 @@ const GALLERY_PHOTOS = [
     caption: 'Belajar fokus',
     slotClass: 'gallery-slot-fokus',
     objectPosition: 'center 22%',
-    width: 600,
-    height: 750,
+    width: 554,
+    height: 1200,
   },
 ];
 

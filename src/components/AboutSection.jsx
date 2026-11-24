@@ -12,8 +12,9 @@ export default function AboutSection() {
               <div className="col-span-3">
                 <div className="about-collage-main photo-frame aspect-[3/4] rounded-3xl about-collage-card">
                   <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=75"
                     alt="Siswa belajar bersama tutor privat di rumah"
+                    decoding="async"
                     loading="lazy"
                   />
                 </div>
@@ -21,15 +22,17 @@ export default function AboutSection() {
               <div className="about-collage-stack col-span-2 flex flex-col gap-3 sm:gap-4 pt-8">
                 <div className="reveal-left delay-150 photo-frame aspect-square rounded-3xl about-collage-card">
                   <img
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80"
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=75"
                     alt="Siswa belajar dengan tutor privat"
+                    decoding="async"
                     loading="lazy"
                   />
                 </div>
                 <div className="reveal-left delay-300 photo-frame aspect-square rounded-3xl about-collage-card">
                   <img
-                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80"
+                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=75"
                     alt="Siswa mengerjakan latihan soal bimbingan belajar"
+                    decoding="async"
                     loading="lazy"
                   />
                 </div>
@@ -47,7 +50,7 @@ export default function AboutSection() {
 
               <div className="reveal-right delay-150">
                 <p className="text-[#475569] mt-6 text-base sm:text-lg leading-relaxed">
-                  Mumtaz Bimbel Sampit adalah lembaga bimbingan belajar terpercaya di Sampit yang berkomitmen menghadirkan pendidikan berkualitas. Kami mendampingi siswa dari tingkat TK hingga SMA melalui sistem privat <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">1-on-1 (guru datang langsung ke rumah)</span> untuk meningkatkan prestasi akademik sekaligus membimbing kegiatan mengaji dengan pendekatan yang ramah dan terarah.
+                  Mumtaz Bimbel Sampit adalah lembaga bimbingan belajar terpercaya di Sampit yang berkomitmen menghadirkan pendidikan berkualitas. Kami mendampingi siswa dari tingkat PAUD, TK hingga SMA melalui sistem privat <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">1-on-1 (guru datang langsung ke rumah)</span> untuk meningkatkan prestasi akademik sekaligus membimbing kegiatan mengaji dengan pendekatan yang ramah dan terarah.
                 </p>
               </div>
             </div>
@@ -64,9 +67,9 @@ export default function AboutSection() {
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
           {/* Header Visi & Misi */}
           <div className="reveal-element delay-75 mb-10 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl lg:text-[2.3rem] font-extrabold text-[#0B1F3B] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[2.3rem] font-extrabold text-[#0B1F3B] tracking-tight">
               Visi &amp; Misi <span className="text-[#2563EB]">Bimbel Mumtaz</span>
-            </h3>
+            </h2>
             <p className="text-sm sm:text-base text-[#475569] mt-2 max-w-2xl leading-relaxed">
               Komitmen dan arah pendidikan kami dalam mendampingi tumbuh kembang akademik anak di Sampit.
             </p>
@@ -83,12 +86,15 @@ export default function AboutSection() {
                     <img
                       src="assets/images/logo-mumtaz.png"
                       alt="Logo Bimbel Mumtaz"
+                      width="48"
+                      height="48"
+                      decoding="async"
                       className="w-full h-full object-contain p-1"
                       loading="lazy"
                     />
                   </div>
                   <div>
-                    <h4 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Visi</h4>
+                    <h3 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Visi</h3>
                   </div>
                 </div>
 
@@ -103,8 +109,9 @@ export default function AboutSection() {
               {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}
               <div className="about-visi-image-card order-1 lg:order-2 group">
                 <img
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80"
+                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=75"
                   alt="Suasana belajar bimbingan Mumtaz"
+                  decoding="async"
                   className="transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -120,12 +127,15 @@ export default function AboutSection() {
                     <img
                       src="assets/images/logo-mumtaz.png"
                       alt="Logo Bimbel Mumtaz"
+                      width="48"
+                      height="48"
+                      decoding="async"
                       className="w-full h-full object-contain p-1"
                       loading="lazy"
                     />
                   </div>
                   <div>
-                    <h4 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Misi</h4>
+                    <h3 className="text-xl sm:text-[22px] font-extrabold text-[#0B1F3B] tracking-tight">Misi</h3>
                   </div>
                 </div>
 
@@ -138,7 +148,7 @@ export default function AboutSection() {
                         01
                       </div>
                       <div>
-                        <h5 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pembelajaran Adaptif &amp; Personal</h5>
+                        <h4 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pembelajaran Adaptif &amp; Personal</h4>
                         <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
                           Menyediakan metode pembelajaran privat yang adaptif, menyenangkan, dan berfokus pada kebutuhan individu siswa <span className="font-semibold text-[#0B1F3B] whitespace-nowrap">(1-on-1)</span>.
                         </p>
@@ -153,7 +163,7 @@ export default function AboutSection() {
                         02
                       </div>
                       <div>
-                        <h5 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pengajar Profesional &amp; Sabar</h5>
+                        <h4 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pengajar Profesional &amp; Sabar</h4>
                         <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
                           Menghadirkan tenaga pengajar yang profesional, sabar, dan berpengalaman menghadapi berbagai karakter anak.
                         </p>
@@ -168,7 +178,7 @@ export default function AboutSection() {
                         03
                       </div>
                       <div>
-                        <h5 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pendampingan Akademik &amp; Mengaji</h5>
+                        <h4 className="text-sm sm:text-[15.5px] font-bold text-[#0B1F3B]">Pendampingan Akademik &amp; Mengaji</h4>
                         <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-relaxed mt-0.5">
                           Mengintegrasikan pendampingan akademik secara menyeluruh, mulai dari pelajaran sekolah umum hingga bimbingan mengaji.
                         </p>

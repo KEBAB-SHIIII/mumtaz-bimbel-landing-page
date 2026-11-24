@@ -99,16 +99,20 @@ export default function Navbar() {
             <img
               src="assets/images/logo-mumtaz.png"
               alt="Logo Bimbel Mumtaz"
+              width="48"
+              height="48"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-contain"
               loading="eager"
             />
           </div>
-          <div className="flex flex-col justify-center">
-            <span className="text-[15px] sm:text-lg lg:text-[21px] font-extrabold text-[#0B1F3B] tracking-tight leading-tight group-hover:text-[#2563EB] transition-colors whitespace-nowrap">
-              Bimbel Mumtaz
+          <div className="flex flex-col justify-center min-w-0">
+            <span className="text-[13.5px] xs:text-[14.5px] sm:text-lg lg:text-[20px] xl:text-[21px] font-extrabold text-[#0B1F3B] tracking-tight leading-tight group-hover:text-[#2563EB] transition-colors whitespace-nowrap">
+              Bimbel Mumtaz Sampit
             </span>
-            <span className="text-[10px] sm:text-[11px] lg:text-[11.5px] font-semibold text-[#2563EB] tracking-wide leading-none mt-0.5 sm:mt-1 whitespace-nowrap">
-              Les Privat ke Rumah Sampit
+            <span className="text-[10px] sm:text-[11px] lg:text-[11.5px] font-semibold text-[#1D4ED8] tracking-wide leading-none mt-0.5 sm:mt-1 whitespace-nowrap">
+              Les Privat ke Rumah
             </span>
           </div>
         </a>
@@ -135,7 +139,9 @@ export default function Navbar() {
             className="nav-portal-btn"
             href="#portal-orang-tua"
           >
-            <span className="material-symbols-outlined text-[17px] sm:text-[19px]">supervisor_account</span>
+            <svg width="18" height="18" className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+            </svg>
             <span>Portal<span className="nav-portal-text-extra"> Orang Tua</span></span>
             <span className="text-[15px] sm:text-[17px] font-bold ml-0.5 leading-none">&rsaquo;</span>
           </a>
@@ -192,7 +198,9 @@ export default function Navbar() {
             href="#portal-orang-tua"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="material-symbols-outlined text-[19px]">supervisor_account</span>
+            <svg width="19" height="19" className="w-5 h-5 shrink-0" style={{ width: '19px', height: '19px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+            </svg>
             <span>Portal Orang Tua</span>
             <span className="text-base font-bold ml-0.5 leading-none">&rsaquo;</span>
           </a>

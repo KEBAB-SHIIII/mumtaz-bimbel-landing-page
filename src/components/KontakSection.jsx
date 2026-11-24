@@ -7,7 +7,7 @@ import {
 } from './Footer';
 
 const PROGRAM_OPTIONS = [
-  { value: 'tk', label: 'Privat TK', tag: 'Usia Dini', waLabel: 'Privat TK (Usia Dini)' },
+  { value: 'tk', label: 'Privat PAUD & TK', tag: 'Usia Dini', waLabel: 'Privat PAUD & TK (Usia Dini)' },
   { value: 'sd', label: 'Privat SD', tag: 'Kelas 1–6', waLabel: 'Privat SD (Kelas 1-6)' },
   { value: 'smp', label: 'Privat SMP', tag: 'Kelas 7–9', waLabel: 'Privat SMP (Kelas 7-9)' },
   { value: 'sma', label: 'Privat SMA', tag: 'Kelas 10–12', waLabel: 'Privat SMA (Saintek, Soshum, UTBK)' },
@@ -169,23 +169,27 @@ export default function KontakSection() {
 
               <ul className="mt-5 space-y-3 text-xs sm:text-sm">
                 <li className="flex items-start gap-3">
-                  <span className="contact-icon-badge">
-                    <span className="material-symbols-outlined text-[18px]">location_on</span>
+                  <span className="contact-icon-badge" aria-hidden="true">
+                    <svg width="18" height="18" className="w-4 h-4 shrink-0" style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
                   </span>
                   <div>
                     <strong className="block font-bold text-white">Alamat</strong>
-                    <span className="text-white/85 leading-snug block mt-0.5">
+                    <span className="text-white/95 leading-snug block mt-0.5">
                       {OFFICIAL_ADDRESS}
                     </span>
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="contact-icon-badge">
-                    <span className="material-symbols-outlined text-[18px]">schedule</span>
+                  <span className="contact-icon-badge" aria-hidden="true">
+                    <svg width="18" height="18" className="w-4 h-4 shrink-0" style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                    </svg>
                   </span>
                   <div>
                     <strong className="block font-bold text-white">Jam operasional</strong>
-                    <span className="text-white/85 leading-snug block mt-0.5">
+                    <span className="text-white/95 leading-snug block mt-0.5">
                       {OFFICIAL_HOURS}
                     </span>
                   </div>
@@ -197,9 +201,11 @@ export default function KontakSection() {
                   href={`https://wa.me/${OFFICIAL_WA_NUMBER}?text=Halo%20Bimbel%20Mumtaz%20Sampit,%20saya%20ingin%20konsultasi%20les%20privat%20ke%20rumah.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#2563EB] hover:bg-[#EFF6FF] font-bold text-xs sm:text-sm shadow-lg shadow-[#0B1F3B]/15 transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#1D4ED8] hover:bg-[#EFF6FF] font-bold text-xs sm:text-sm shadow-lg shadow-[#0B1F3B]/15 transition-all hover:-translate-y-0.5"
                 >
-                  <span className="material-symbols-outlined text-[18px]">sms</span>
+                  <svg width="18" height="18" className="w-4 h-4 shrink-0" style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z" />
+                  </svg>
                   <span>Chat via WhatsApp</span>
                 </a>
               </div>
@@ -367,8 +373,10 @@ export default function KontakSection() {
 
             {submittedWaUrl && (
               <div className="mt-4 p-4 rounded-xl bg-[#F0F7FF] border border-[#DBEAFE] flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-[#2563EB] font-semibold text-sm">
-                  <span className="material-symbols-outlined text-[20px]">check_circle</span>
+                <div className="flex items-center gap-2 text-[#1D4ED8] font-semibold text-sm">
+                  <svg width="20" height="20" className="w-5 h-5 shrink-0" style={{ width: '20px', height: '20px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
                   <span>Terima kasih, permohonan Anda terkirim.</span>
                 </div>
                 <p className="text-xs text-[#475569]">Tim Bimbel Mumtaz akan segera menghubungi Anda.</p>
@@ -379,7 +387,9 @@ export default function KontakSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-xl bg-[#2563EB] text-white font-bold text-xs hover:bg-[#1D4ED8] transition-colors shadow-sm"
                   >
-                    <span className="material-symbols-outlined text-[18px]">chat</span>
+                    <svg width="18" height="18" className="w-4 h-4 shrink-0" style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z" />
+                    </svg>
                     <span>Lanjutkan ke WhatsApp Admin ({OFFICIAL_WA_DISPLAY})</span>
                   </a>
                 </div>

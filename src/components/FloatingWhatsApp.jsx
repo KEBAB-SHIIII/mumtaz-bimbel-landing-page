@@ -10,7 +10,9 @@ export default function FloatingWhatsApp() {
       rel="noopener noreferrer"
       aria-label="Konsultasi WhatsApp Mumtaz Sampit"
     >
-      <span className="material-symbols-outlined text-[20px]">chat</span>
+      <svg width="20" height="20" className="w-5 h-5 shrink-0" style={{ width: '20px', height: '20px' }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z" />
+      </svg>
       <span className="hidden sm:inline">Tanya Les Privat</span>
     </a>
   );

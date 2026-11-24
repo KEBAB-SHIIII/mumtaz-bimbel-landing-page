@@ -6,6 +6,18 @@ export default defineConfig({
   base: '/mumtaz-bimbel-landing-page/',
   server: {
     port: 5173,
-    open: false
-  }
+    open: false,
+  },
+  build: {
+    target: 'es2020',
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
 });
