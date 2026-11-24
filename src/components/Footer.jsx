@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="flex items-center gap-3.5">
               <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white">
                 <img
-                  src="assets/images/logo-mumtaz.png"
+                  src={`${import.meta.env.BASE_URL}assets/images/logo-mumtaz.png`}
                   alt="Logo Bimbel Mumtaz"
                   width="48"
                   height="48"

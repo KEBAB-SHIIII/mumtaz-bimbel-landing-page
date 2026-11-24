@@ -97,7 +97,7 @@ export default function Navbar() {
         >
           <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
             <img
-              src="assets/images/logo-mumtaz.png"
+              src={`${import.meta.env.BASE_URL}assets/images/logo-mumtaz.png`}
               alt="Logo Bimbel Mumtaz"
               width="48"
               height="48"

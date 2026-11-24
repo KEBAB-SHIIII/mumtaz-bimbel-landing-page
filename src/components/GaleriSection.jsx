@@ -1,8 +1,10 @@
 import React from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+
 const GALLERY_PHOTOS = [
   {
-    src: './assets/images/Belajar_Fokus.jpeg',
+    src: `${BASE}assets/images/Belajar_Fokus.jpeg`,
     alt: 'Pendampingan belajar anak di rumah',
     caption: 'Pendampingan telaten',
     slotClass: 'gallery-slot-hero',
@@ -11,7 +13,7 @@ const GALLERY_PHOTOS = [
     height: 1200,
   },
   {
-    src: './assets/images/belajarfokus.jpg',
+    src: `${BASE}assets/images/belajarfokus.jpg`,
     alt: 'Diskusi soal latihan',
     caption: 'Diskusi soal',
     slotClass: 'gallery-slot-land-top',
@@ -20,7 +22,7 @@ const GALLERY_PHOTOS = [
     height: 900,
   },
   {
-    src: './assets/images/mengerjakansoal.jpeg',
+    src: `${BASE}assets/images/mengerjakansoal.jpeg`,
     alt: 'Latihan soal terarah',
     caption: 'Latihan soal',
     slotClass: 'gallery-slot-land-bottom',
@@ -29,7 +31,7 @@ const GALLERY_PHOTOS = [
     height: 1200,
   },
   {
-    src: './assets/images/foto_mengaji.jpeg',
+    src: `${BASE}assets/images/foto_mengaji.jpeg`,
     alt: 'Bimbingan mengaji',
     caption: 'Bimbingan mengaji',
     slotClass: 'gallery-slot-mengaji',
@@ -38,7 +40,7 @@ const GALLERY_PHOTOS = [
     height: 1200,
   },
   {
-    src: './assets/images/belajar_fokus.jpg',
+    src: `${BASE}assets/images/belajar_fokus.jpg`,
     alt: 'Belajar fokus bersama tutor',
     caption: 'Belajar fokus',
     slotClass: 'gallery-slot-fokus',

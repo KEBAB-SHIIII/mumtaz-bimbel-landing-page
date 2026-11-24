@@ -90,7 +90,7 @@ export default function AboutSection() {
                 <div className="flex items-center gap-3.5 mb-5 px-1">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
                     <img
-                      src="assets/images/logo-mumtaz.png"
+                      src={`${import.meta.env.BASE_URL}assets/images/logo-mumtaz.png`}
                       alt="Logo Bimbel Mumtaz"
                       width="48"
                       height="48"
@@ -133,7 +133,7 @@ export default function AboutSection() {
                 <div className="flex items-center gap-3.5 mb-5 px-1 reveal-right delay-100">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-[#BFDBFE] bg-white shrink-0 shadow-xs flex items-center justify-center">
                     <img
-                      src="assets/images/logo-mumtaz.png"
+                      src={`${import.meta.env.BASE_URL}assets/images/logo-mumtaz.png`}
                       alt="Logo Bimbel Mumtaz"
                       width="48"
                       height="48"
