@@ -72,9 +72,10 @@
   transform: translateY(0);
 }
 
-/* Navbar (Diperbesar +0.025x / +2.5% dari ukuran sebelumnya) */
+/* Navbar (Lebar sesuai batas kotak merah & seluruh section bawah mengikuti otomatis) */
 .navbar-floating-header {
-  max-width: 1210px;
+  width: 90%;
+  max-width: 1120px;
 }
 
 .navbar-floating-inner {
@@ -580,11 +581,23 @@
 
 .mini-program-title {
   font-family: 'Manrope', 'Inter', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   font-weight: 800;
   color: #0B1F3B;
   letter-spacing: -0.015em;
   line-height: 1.25;
+}
+
+@media (min-width: 640px) {
+  .mini-program-title {
+    font-size: 1.26rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mini-program-title {
+    font-size: 1.32rem;
+  }
 }
 
 .mini-card-illust {

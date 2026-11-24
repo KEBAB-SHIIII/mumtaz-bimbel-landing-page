@@ -11,8 +11,8 @@ export default function HeroSection() {
                 Privat Berkualitas,
               </span>{' '}
               <span className="hero-title-part part-2 hero-gradient-text">
-                Dekat &amp;{' '}
-              </span>
+                Dekat &amp;
+              </span>{' '}
               <span className="hero-title-part part-3 relative inline-block hero-gradient-text">
                 Terpercaya!
                 <svg
