@@ -72,10 +72,31 @@
   transform: translateY(0);
 }
 
-/* Navbar (Lebar sesuai batas kotak merah & seluruh section bawah mengikuti otomatis) */
+/* Navbar (Lebar sesuai batas kotak merah & seluruh section bawah mengikuti otomatis di semua ukuran layar) */
 .navbar-floating-header {
-  width: 90%;
+  width: calc(100% - 2.25rem);
   max-width: 1120px;
+}
+
+@media (min-width: 640px) {
+  .navbar-floating-header {
+    width: 92%;
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-floating-header {
+    width: 92%;
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar-floating-header {
+    width: 90%;
+    max-width: 1120px;
+  }
 }
 
 .navbar-floating-inner {
@@ -152,10 +173,23 @@
   transition: color 0.2s ease;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1140px) {
+  .navbar-floating-inner {
+    padding: 0.72rem 1.25rem;
+  }
+
+  .navbar-brand-title {
+    font-size: 15px;
+  }
+
   .nav-link {
-    font-size: 12.9px;
-    padding: 0.35rem 0.49rem;
+    font-size: 11.8px;
+    padding: 0.3rem 0.32rem;
+  }
+
+  .nav-portal-btn {
+    padding: 0.52rem 0.95rem;
+    font-size: 11.8px;
   }
 }
 

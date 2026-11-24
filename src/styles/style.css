@@ -25,23 +25,13 @@ html {
   }
 }
 
-@media (min-width: 1024px) {
-  .max-w-\[1100px\],
-  .max-w-\[1140px\],
-  .max-w-\[1240px\] {
-    width: var(--nav-exact-w, 1045px) !important;
-    max-width: var(--nav-exact-w, 1045px) !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  .max-w-\[1100px\],
-  .max-w-\[1140px\],
-  .max-w-\[1240px\] {
-    max-width: 100% !important;
-  }
+.max-w-\[1100px\],
+.max-w-\[1140px\],
+.max-w-\[1240px\] {
+  width: var(--nav-exact-w, 92%) !important;
+  max-width: var(--nav-exact-w, 1120px) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .max-w-\[460px\] {
