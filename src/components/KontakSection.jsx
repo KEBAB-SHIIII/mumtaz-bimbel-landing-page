@@ -213,10 +213,10 @@ export default function KontakSection() {
               Isi data singkat. Kami hubungi Anda secepatnya.
             </p>
 
-            <form className="space-y-3.5" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#0B1F3B] mb-1.5" htmlFor="parentName">
+                  <label className="form-label block font-bold text-[#0B1F3B] mb-2" htmlFor="parentName">
                     Nama orang tua / wali
                   </label>
                   <input
@@ -230,7 +230,7 @@ export default function KontakSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-[#0B1F3B] mb-1.5" htmlFor="homeAddress">
+                  <label className="form-label block font-bold text-[#0B1F3B] mb-2" htmlFor="homeAddress">
                     Alamat domisili
                   </label>
                   <input
@@ -247,7 +247,7 @@ export default function KontakSection() {
 
               <div>
                 <label
-                  className="block text-xs font-bold text-[#0B1F3B] mb-1.5"
+                  className="form-label block font-bold text-[#0B1F3B] mb-2"
                   id="programDropdownLabel"
                   htmlFor="programDropdownBtn"
                 >
@@ -331,7 +331,7 @@ export default function KontakSection() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#0B1F3B] mb-1.5" htmlFor="messageNotes">
+                <label className="form-label block font-bold text-[#0B1F3B] mb-2" htmlFor="messageNotes">
                   Waktu belajar dan catatan
                 </label>
                 <textarea
@@ -345,7 +345,7 @@ export default function KontakSection() {
                 />
               </div>
 
-              <button className="btn-sky w-full py-3 rounded-xl text-sm" type="submit" disabled={isSubmitting}>
+              <button className="btn-sky form-submit-btn w-full py-3.5 rounded-xl" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
                     <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

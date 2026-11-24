@@ -19,18 +19,18 @@ export default function Footer() {
           {/* Kolom 1: Profil Brand */}
           <div>
             <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white">
+              <div className="footer-brand-logo rounded-full overflow-hidden shrink-0 bg-white">
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/logo-mumtaz.png`}
                   alt="Logo Bimbel Mumtaz"
-                  width="48"
-                  height="48"
+                  width="54"
+                  height="54"
                   decoding="async"
                   className="w-full h-full object-cover rounded-full"
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-bold text-base sm:text-[19px] text-white leading-tight">
+              <h3 className="footer-brand-title font-bold text-white leading-tight">
                 Bimbel Mumtaz Sampit
               </h3>
             </div>
@@ -38,10 +38,10 @@ export default function Footer() {
 
           {/* Kolom 2: Alamat & Operasional */}
           <div>
-            <h4 className="font-bold text-base text-white mb-4">
+            <h4 className="footer-col-heading font-bold text-white mb-4">
               Alamat &amp; Layanan
             </h4>
-            <div className="space-y-3.5 text-xs sm:text-[13px] text-white/90">
+            <div className="footer-col-list space-y-3.5 text-white/95">
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 shrink-0 mt-0.5" fill="#FFFFFF" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -59,16 +59,16 @@ export default function Footer() {
 
           {/* Kolom 3: Kontak Kami (Sesuai Referensi Gambar) */}
           <div>
-            <h4 className="font-bold text-base text-white mb-4">
+            <h4 className="footer-col-heading font-bold text-white mb-4">
               Kontak Kami
             </h4>
-            <ul className="space-y-3.5 text-xs sm:text-[13px]">
+            <ul className="footer-col-list space-y-3.5">
               <li>
                 <a
                   href={`https://wa.me/${OFFICIAL_WA_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-white/90 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-3 text-white/95 hover:text-white transition-colors"
                 >
                   <svg className="w-5 h-5 shrink-0" fill="#FFFFFF" viewBox="0 0 24 24">
                     <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.14l-.3-.18-3.12.82.83-3.04-.2-.32a8.196 8.196 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.83 7.36c-.18 0-.48.07-.73.34-.24.26-.93.91-.93 2.23s.96 2.58 1.09 2.76c.13.18 1.89 2.89 4.58 4.05.64.28 1.14.44 1.53.57.64.2 1.22.17 1.68.1.52-.08 1.6-.65 1.82-1.29.23-.63.23-1.17.16-1.28-.07-.11-.25-.17-.52-.31-.26-.14-1.56-.77-1.8-.86-.24-.09-.41-.13-.59.13-.17.27-.67.87-.82 1.04-.15.17-.3.2-.56.07-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.12-.54.12-.12.26-.31.39-.47.13-.16.17-.27.26-.44.09-.18.04-.33-.02-.46-.07-.13-.59-1.43-.81-1.96-.22-.51-.43-.44-.59-.45-.15 0-.32-.01-.5-.01z" />
@@ -79,7 +79,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${OFFICIAL_EMAIL}`}
-                  className="inline-flex items-center gap-3 text-white/90 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-3 text-white/95 hover:text-white transition-colors"
                 >
                   <svg className="w-5 h-5 shrink-0" fill="#FFFFFF" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
@@ -92,10 +92,10 @@ export default function Footer() {
 
           {/* Kolom 4: Ikuti Kami (Sesuai Referensi Gambar) */}
           <div>
-            <h4 className="font-bold text-base text-white mb-4">
+            <h4 className="footer-col-heading font-bold text-white mb-4">
               Ikuti Kami
             </h4>
-            <ul className="space-y-3.5 text-xs sm:text-[13px]">
+            <ul className="footer-col-list space-y-3.5">
               <li>
                 <a
                   href={OFFICIAL_INSTAGRAM_URL}
