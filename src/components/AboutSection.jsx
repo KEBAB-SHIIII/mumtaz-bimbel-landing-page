@@ -115,17 +115,30 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Gambar di Bawah Visi: Mengisi Sisa Ruang Sehingga Sejajar Presisi dengan Bawah Misi */}
-              <div className="about-visi-image-card md-order-2 order-1 lg:order-2 group">
-                <img
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&h=480&q=75"
-                  alt="Suasana belajar bimbingan Mumtaz"
-                  width="700"
-                  height="480"
-                  decoding="async"
-                  className="transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+              {/* 2 Gambar Potret di Bawah Visi: Berdampingan & Mengisi Sisa Ruang Sejajar dengan Bawah Misi */}
+              <div className="about-visi-portrait-pair md-order-2 order-1 lg:order-2">
+                <div className="about-visi-image-card group">
+                  <img
+                    src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=450&h=600&q=75"
+                    alt="Suasana belajar bimbingan Mumtaz"
+                    width="450"
+                    height="600"
+                    decoding="async"
+                    className="transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="about-visi-image-card group">
+                  <img
+                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=450&h=600&q=75"
+                    alt="Pendampingan belajar siswa secara interaktif"
+                    width="450"
+                    height="600"
+                    decoding="async"
+                    className="transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
 

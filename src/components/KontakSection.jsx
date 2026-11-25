@@ -62,7 +62,7 @@ export default function KontakSection() {
       setIsSubmitting(false);
       const programLabel = selectedProgram ? selectedProgram.waLabel : educationLevel;
       const waMessage = encodeURIComponent(
-        `Halo Bimbel Mumtaz Sampit, saya *${parentName.trim()}* (${homeAddress.trim()}) ingin mendaftar *${programLabel}* ke rumah.\n\nJadwal & Catatan: ${messageNotes.trim()}`
+        `Halo Bimbel Mumtaz Sampit, saya *${parentName.trim()}* (${homeAddress.trim()}) ingin mendaftar *${programLabel}* ke rumah.\n\nMata Pelajaran & Catatan: ${messageNotes.trim()}`
       );
       const waUrl = `https://wa.me/${OFFICIAL_WA_NUMBER}?text=${waMessage}`;
       setSubmittedWaUrl(waUrl);
@@ -332,12 +332,12 @@ export default function KontakSection() {
 
               <div>
                 <label className="form-label block font-bold text-[#0B1F3B] mb-2" htmlFor="messageNotes">
-                  Waktu belajar dan catatan
+                  Mata pelajaran dan catatan
                 </label>
                 <textarea
                   className="form-field resize-none"
                   id="messageNotes"
-                  placeholder="Contoh: Selasa dan Kamis sore, pukul 16.00 WIB"
+                  placeholder="Contoh: Matematika, Bahasa Inggris, atau Mengaji (Selasa & Kamis sore)"
                   required
                   rows={2}
                   value={messageNotes}
