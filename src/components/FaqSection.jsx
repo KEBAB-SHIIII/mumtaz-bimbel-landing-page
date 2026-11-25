@@ -58,7 +58,7 @@ export default function FaqSection() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-3.5 sm:space-y-4">
+        <div className="w-full space-y-3.5 sm:space-y-4">
           {FAQ_DATA.map((item, idx) => {
             const isOpen = activeIndex === idx;
             return (

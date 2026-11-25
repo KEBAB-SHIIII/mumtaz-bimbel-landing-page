@@ -131,27 +131,24 @@ function FadedTestimoniCard({ item, onSelect, ariaLabel }) {
 
 function ActiveTestimoniCard({ item }) {
   return (
-    <article
-      className="testi-card-active"
-      style={{
-        background: 'linear-gradient(135deg, #F0F7FF 0%, #DFEEFE 45%, #BFDCFE 100%)',
-        color: '#0B1F3B',
-        borderRadius: '24px',
-        border: '1.5px solid #93C5FD',
-        boxShadow: '0 20px 45px -12px rgba(37, 99, 235, 0.22), 0 4px 12px -2px rgba(37, 99, 235, 0.08)',
-      }}
-    >
-      <div>
+    <article className="testi-card-active">
+      {/* Dekorasi lingkaran lembut di sudut kanan atas & kanan bawah */}
+      <div className="testi-card-decor" aria-hidden="true">
+        <span className="testi-decor-circle-top" />
+        <span className="testi-decor-circle-bottom" />
+      </div>
+
+      <div className="relative z-10">
         {/* Ikon Kutipan Berwarna Biru Mumtaz */}
         <svg
-          width="26"
-          height="26"
-          className="testi-quote-icon mb-3 shrink-0"
+          width="32"
+          height="32"
+          className="testi-quote-icon mb-3.5 shrink-0"
           style={{
-            width: '26px',
-            height: '26px',
-            maxWidth: '26px',
-            maxHeight: '26px',
+            width: '32px',
+            height: '32px',
+            maxWidth: '32px',
+            maxHeight: '32px',
             fill: '#2563EB',
           }}
           viewBox="0 0 24 24"
@@ -162,23 +159,15 @@ function ActiveTestimoniCard({ item }) {
 
         {/* Teks Ulasan Profesional */}
         <blockquote
-          className="text-[15px] sm:text-[16.5px] leading-relaxed font-semibold text-[#0B1F3B]"
+          className="text-[15px] sm:text-[16.5px] leading-relaxed font-medium text-[#0B1F3B]"
           style={{ color: '#0B1F3B' }}
         >
           &ldquo;{item.quote}&rdquo;
         </blockquote>
       </div>
 
-      {/* Segitiga / Ekor Balon Chat */}
-      <div
-        className="testi-bubble-tail"
-        style={{
-          backgroundColor: '#BFDCFE',
-          borderBottom: '1.5px solid #93C5FD',
-          borderRight: '1.5px solid #93C5FD',
-        }}
-        aria-hidden="true"
-      ></div>
+      {/* Segitiga / Diamond Ekor Balon Chat */}
+      <div className="testi-bubble-tail" aria-hidden="true"></div>
     </article>
   );
 }
