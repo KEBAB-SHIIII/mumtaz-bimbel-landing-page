@@ -62,7 +62,7 @@ export default function KontakSection() {
       setIsSubmitting(false);
       const programLabel = selectedProgram ? selectedProgram.waLabel : educationLevel;
       const waMessage = encodeURIComponent(
-        `Halo Bimbel Mumtaz Sampit, saya *${parentName.trim()}* (${homeAddress.trim()}) ingin mendaftar *${programLabel}* ke rumah.\n\nMata Pelajaran & Catatan: ${messageNotes.trim()}`
+        `Halo Bimbel Mumtaz Sampit, saya *${parentName.trim()}* (${homeAddress.trim()}) ingin mendaftar *${programLabel}* ke rumah.\n\nMata Pelajaran: ${messageNotes.trim()}`
       );
       const waUrl = `https://wa.me/${OFFICIAL_WA_NUMBER}?text=${waMessage}`;
       setSubmittedWaUrl(waUrl);
@@ -82,7 +82,7 @@ export default function KontakSection() {
           {/* Left Blue Card */}
           <div className="md-col-span-5 lg:col-span-5 contact-left-card">
             <div className="contact-illust-header" aria-hidden="true">
-              <svg viewBox="0 0 380 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 380 175" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="skyHeaderGrad" x1="190" y1="0" x2="190" y2="175" gradientUnits="userSpaceOnUse">
                     <stop stopColor="#D7E8FF" />
@@ -332,14 +332,14 @@ export default function KontakSection() {
 
               <div>
                 <label className="form-label block font-bold text-[#0B1F3B] mb-2" htmlFor="messageNotes">
-                  Mata pelajaran dan catatan
+                  Mata pelajaran
                 </label>
-                <textarea
-                  className="form-field resize-none"
+                <input
+                  className="form-field"
                   id="messageNotes"
-                  placeholder="Contoh: Matematika, Bahasa Inggris, atau Mengaji (Selasa & Kamis sore)"
+                  placeholder="Contoh: Matematika, Bahasa Inggris"
                   required
-                  rows={2}
+                  type="text"
                   value={messageNotes}
                   onChange={(e) => setMessageNotes(e.target.value)}
                 />
